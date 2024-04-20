@@ -1,4 +1,6 @@
-# 1M - Projet Mini-serre automatisée - Architectures des systèmes informatiques
+# 1M - Projet Micro-serre automatisée
+## Architectures des systèmes informatiques
+### Atelier 1
 [Source](https://github.com/ph3n4t3s/1m1-archsys/blob/master/1m1-ArchSys)
 
 ## @showdialog
