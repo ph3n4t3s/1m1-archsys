@@ -40,25 +40,3 @@
 
 #### Programmation du Micro:Bit avec la led RGB
 
-
-
-### Exemple de code block
-```blocks
-Exemple de code block
-```
-
-### Exemple de code Python
-```python
-function ping () {
-    radio.sendString(« PING » + « , » + « 0 » + « , » + («  » + control.deviceSerialNumber()))
-}
-function LedSwitch () {
-    if (LedStatus == 0) {
-        LedStatus = 255
-        strip.showColor(neopixel.colors(NeoPixelColors.White))
-    } else {
-        LedStatus = 0
-        strip.showColor(neopixel.colors(NeoPixelColors.Black))
-    }
-}
-```
