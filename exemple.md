@@ -12,7 +12,7 @@
 > - 🛤️ **Organisez** et  **planifiez** votre travail de groupe. (Qui ? Fait quoi ? quand ?) 
 > - 🧑‍🧑‍🧒 **Communiquez** entre vous.
 > - 🧭 **Laissez des traces de **TOUTES vos expérimentations** en prenant des **notes**, des **photos** (avec votre téléphone portable) ou des **captures d'écran**.
-> - ⚠️ Mettez à jour le journal de bord à **CHAQUE séance**.⚠️
+> - ⚠️ Mettez à jour le journal de bord tout au long de **CHAQUE séance**.⚠️
 > - 🆘 Si vous êtes **perdu** servez-vous des **guides** et des **ressources** qui sont à votre disposition dans le **répertoire du projet** sur **OneDrive**.
 
 ## @showdialog
@@ -20,31 +20,53 @@
 ![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive24.jpeg?raw=true)
 
 
-## Étape 1/5 - Récolte de données via USB
-Nous allons créer un programme qui envoit la température et la luminosité sur le port série (**USB**) afin de pouvoir les visualiser sur le PC.
+# Récolte de données via USB
+Programme qui envoie continuellement les mesures de la **température** et de la **luminosité** sur le port série, (**USB**) afin de les **enregistrer"" et les **traiter** dans un deuxième temps sur le PC.
 
 **Remarque**
-- La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants (CPU, matrice de leds)
+- La mesure de la **température** et de la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants (CPU, matrice de leds)
 
-Pour transmettre via **USB** ces données, nous allons utiliser la **fonction** « série écrire valeur » dans Communication Série
+## Étape 1 - Utilisation d'une boucle infinie
+Une boucle infinie envoit continuellement les données à l'aide de la boucle ``||basic:toujours||`` (Base).
+
+## Étape 2 - Transmettre la température sur le port série. (**USB**)
+Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:température (°C)||`` (Entrée) sert à envoyer la **température** sur le port série. (**USB**) 
+
+## @showhint
+
+```blocks
+basic.forever(function () {
+    serial.writeValue("temp", input.temperature())
+})
+```
+
+## @showhint
+
+## Étape 3 - Transmettre la luminosité sur le port série. (**USB**)
+Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:niveau d'intensité lumineuse||`` (Entrée) sert à envoyer la **luminosité** sur le port série. (**USB**)
+
+## @showhint
+
 ```blocks
 basic.forever(function () {
     serial.writeValue("temp", input.temperature())
     serial.writeValue("lum", input.lightLevel())
 })
 ```
+## @showhint
 
-Si vous ne parvenez pas à faire l'exerice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
+## Étape 4 - Visualisez les données sur le PC.
 
+> - 🆘 Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube du RECIT](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 
-## Étape 2/5 - Sauvegarde des données récoltées
+# Sauvegarde des données récoltées sur le PC
 Sauvegarde de données
 
-## Étape 3/5 - Programmation du Micro:Bit avec le capteur M5STACK EARTH
+# Récolte de données avec le capteur M5STACK EARTH
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
 
-## Étape 4/5 - Programmation du Micro:Bit avec le capteur DHT11
+# Récolte de données avec le capteur DHT11
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
 
-## Étape 5/5 - Programmation du Micro:Bit avec la led RGB
+# Gestion de la couleur et l'intensité de la led RGB
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive31.jpeg?raw=true)
