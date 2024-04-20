@@ -1,9 +1,9 @@
 ![logo Harmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg)
 
 ## Architecture des systèmes informatiques
-* [Visulaliser la partie 1 ***** ](/1m1-archsys/1m1archsys)    [Accéder à l'activié MakeCode](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m1-archsys/1m1-archsys)
-* [Visulaliser la partie 2 ***** ](/1m2-archsys/1m2archsys)    [Accéder à l'activié MakeCode](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m2-archsys/1m2-archsys)
-* [Visulaliser la partie 3 ***** ](/1m3-archsys/1m3archsys)    [Accéder à l'activié MakeCode](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m3-archsys/1m3-archsys)
+* [Visulaliser la partie 1 ***** ](/1m1-archsys/1M1-ArchSys)    [Accéder à l'activié MakeCode](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m1-archsys/1M1-ArchSys)
+* [Visulaliser la partie 2 ***** ](/1m2-archsys/1M2-ArchSys)    [Accéder à l'activié MakeCode](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m2-archsys/1M2-ArchSys)
+* [Visulaliser la partie 3 ***** ](/1m3-archsys/1M3-ArchSys)    [Accéder à l'activié MakeCode](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m3-archsys/1M3-ArchSys)
 
 
 > Ouvrir cette page à [https://ph3n4t3s.github.io/1m1-archsys/](https://ph3n4t3s.github.io/1m1-archsys/)
