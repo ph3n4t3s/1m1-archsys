@@ -1,4 +1,7 @@
+serial.writeLine(timeanddate.dateTime())
 basic.forever(function () {
-    serial.writeValue("temp", input.temperature())
-    serial.writeValue("lum", input.lightLevel())
+    serial.writeLine(timeanddate.time(timeanddate.TimeFormat.HHMMSS24hr))
+    serial.writeValue("temperature", input.temperature())
+    serial.writeValue("luminosite", input.lightLevel())
+    basic.pause(1000)
 })

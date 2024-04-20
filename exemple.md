@@ -3,8 +3,7 @@
 ## @showdialog
 
 ![Logo H@rmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg?raw=true)
-
-## Atelier 1 - Entrées/Sorties (I/O)
+![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive24.jpeg?raw=true)
 
 ℹ️ **CONSIGNES IMPORTANTES**
 > - 🗂️ **Sauvegardez TOUS vos documents**  dans votre répertoire de travail de groupe sur **OneDrive**.
@@ -17,34 +16,37 @@
 
 ## @showdialog
 
-![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive24.jpeg?raw=true)
-
-
-## Étape 1/5 - Récolte de données via USB
-Nous allons créer un programme qui envoit la température et la luminosité sur le port série (**USB**) afin de pouvoir les visualiser sur le PC.
+# Récolte de données via USB
+Programme qui envoit continuellement la **température** et la **luminosité** sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
 **Remarque**
-- La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants (CPU, matrice de leds)
+- La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (CPU, matrice de leds)
 
-Pour transmettre via **USB** ces données, nous allons utiliser la **fonction** « série écrire valeur » dans Communication Série
+## Étape 1/3 - Programmer le Micro:Bit @showhint
+Pour transmettre via **USB** ces données, il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie Communication Série.
+
 ```blocks
+serial.writeLine(timeanddate.dateTime())
 basic.forever(function () {
-    serial.writeValue("temp", input.temperature())
-    serial.writeValue("lum", input.lightLevel())
+    serial.writeLine(timeanddate.time(timeanddate.TimeFormat.HHMMSS24hr))
+    serial.writeValue("temperature", input.temperature())
+    serial.writeValue("luminosite", input.lightLevel())
+    basic.pause(1000)
 })
 ```
 
 Si vous ne parvenez pas à faire l'exerice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 
 
-## Étape 2/5 - Sauvegarde des données récoltées
-Sauvegarde de données
+## Étape 2/3 - Visualiser les données sur le PC @showhint
 
-## Étape 3/5 - Programmation du Micro:Bit avec le capteur M5STACK EARTH
+## Étape 3/3 - Sauvegarder les données sur le PC @showhint
+
+# Programmation du Micro:Bit avec le capteur M5STACK EARTH
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
 
-## Étape 4/5 - Programmation du Micro:Bit avec le capteur DHT11
+# Programmation du Micro:Bit avec le capteur DHT11
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
 
-## Étape 5/5 - Programmation du Micro:Bit avec la led RGB
+# Programmation du Micro:Bit avec la led RGB
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive31.jpeg?raw=true)

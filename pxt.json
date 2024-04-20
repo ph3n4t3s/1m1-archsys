@@ -6,7 +6,8 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "pxt-DHT11_DHT22": "github:alankrantas/pxt-dht11_dht22#v0.0.3"
+        "pxt-DHT11_DHT22": "github:alankrantas/pxt-dht11_dht22#v0.0.3",
+        "microbit-pxt-timeanddate": "github:bsiever/microbit-pxt-timeanddate#v2.0.33"
     },
     "files": [
         "main.blocks",
@@ -14,7 +15,8 @@
         "README.md",
         "tutorial-info-cache.json",
         "exemple.md",
-        "img/index-img.md"
+        "img/index-img.md",
+        "tutoriel-compteur.md"
     ],
     "testFiles": [
         "test.ts"
@@ -26,5 +28,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
