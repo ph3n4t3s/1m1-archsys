@@ -22,7 +22,7 @@ Programme qui envoit continuellement la **température** et la **luminosité** s
 **Remarque**
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (CPU, matrice de leds)
 
-## Étape 1/3 - Programmer le Micro:Bit @showhint
+## Étape 1/2 - Programmer le Micro:Bit @showhint
 ### Explications sur le programme
 Les données sont envoyées chaque seconde à l'aide de la boucle ``||basic:toujours||`` (Base).
 La **fonction** ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:température (°C)||`` (Entrée) sert à envoyer la **température** sur le port série. (**USB**) 
@@ -38,13 +38,11 @@ basic.forever(function () {
 
 > - 🆘 Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube du RECIT](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 
-
-## Étape 2/3 - Visualiser les données sur le PC @showhint
+## Étape 2/2 - Transférer le programme. Visualiser et sauvegarder les données sur le PC @showhint
 Pour visualiser les données sur le PC, il faut préablement transférer le programme sur le Micro:Bit.
 Ensuite, un nouveau bouton **Afficher les données Appareil** apparaît sur la gauche de l'écran
 ![Télécharger et visualiser les données sur le PC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Record1.gif?raw=true) 
 
-## Étape 3/3 - Sauvegarder les données sur le PC @showhint
 
 # Récolte de données avec le capteur M5STACK EARTH
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
