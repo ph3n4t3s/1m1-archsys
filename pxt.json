@@ -13,7 +13,8 @@
         "main.ts",
         "README.md",
         "tutorial-info-cache.json",
-        "exemple.md"
+        "exemple.md",
+        "img/index-img.md"
     ],
     "testFiles": [
         "test.ts"
