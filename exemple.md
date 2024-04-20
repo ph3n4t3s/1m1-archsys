@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-![Logo H@rmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg)
+![Logo H@rmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg?raw=true)
 
 ## Atelier 1 - Entrées/Sorties (I/O)
 
@@ -44,10 +44,10 @@ FÉLICITATIONS!  Tu peux maintenant faire défiler tout le texte que tu désires
 Sauvegarde de données
 
 ## Étape 3/5 - Programmation du Micro:Bit avec le capteur M5STACK EARTH
-Branchement du capteur d'humidité (sol) - M5STACK EARTH
+![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
 
 ## Étape 4/5 - Programmation du Micro:Bit avec le capteur DHT11
-Branchement du capteur de température et d'humidité (air) - DHT11
+![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
 
 ## Étape 5/5 - Programmation du Micro:Bit avec la led RGB
-Branchement de l'actuateur - Led RGB
+![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive31.jpeg?raw=true)
