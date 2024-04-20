@@ -23,16 +23,13 @@ Programme qui envoit continuellement la **température** et la **luminosité** s
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (CPU, matrice de leds)
 
 ## Étape 1/3 - Programmer le Micro:Bit @showhint
-Une boucle infinie envoit continuellement les données à l'aide de la boucle ``||basic:toujours||`` (Base).
-Pour transmettre les données via le port série (**USB**), il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie Communication Série.
-Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:température (°C)||`` (Entrée) sert à envoyer la **température** sur le port série. (**USB**) 
-Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:niveau d'intensité lumineuse||`` (Entrée) sert à envoyer la **luminosité** sur le port série. (**USB**)
-
+### Explications sur le programme
+Les données sont envoyées chaque seconde à l'aide de la boucle ``||basic:toujours||`` (Base).
+La **fonction** ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:température (°C)||`` (Entrée) sert à envoyer la **température** sur le port série. (**USB**) 
+La **fonction** ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:niveau d'intensité lumineuse||`` (Entrée) sert à envoyer la **luminosité** sur le port série. (**USB**)
 
 ```blocks
-serial.writeLine(timeanddate.dateTime())
 basic.forever(function () {
-    serial.writeLine(timeanddate.time(timeanddate.TimeFormat.HHMMSS24hr))
     serial.writeValue("temperature", input.temperature())
     serial.writeValue("luminosite", input.lightLevel())
     basic.pause(1000)
@@ -43,6 +40,9 @@ basic.forever(function () {
 
 
 ## Étape 2/3 - Visualiser les données sur le PC @showhint
+Pour visualiser les données sur le PC, il faut préablement transférer le programme sur le Micro:Bit.
+Ensuite, un nouveau bouton **Afficher les données Appareil** apparaît sur la gauche de l'écran
+ 
 
 ## Étape 3/3 - Sauvegarder les données sur le PC @showhint
 
