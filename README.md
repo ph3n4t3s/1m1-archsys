@@ -1,3 +1,4 @@
+![logo Harmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg)
 
 > Ouvrir cette page à [https://ph3n4t3s.github.io/1m1-archsys/](https://ph3n4t3s.github.io/1m1-archsys/)
 
