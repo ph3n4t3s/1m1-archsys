@@ -30,6 +30,7 @@ Faire défiler un mot sur le Micro:bit
 Nous allons créer un programme qui mesure et envoie la température et la luminosité sur le port série (**USB**) afin de pouvoir visualiser les données sur le PC, dont l'algorithme est le suivant :
 
 
+[Vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw)
 
 Pour cela nous allons utiliser la fonction « série écrire valeur » dans Communication Série
 
