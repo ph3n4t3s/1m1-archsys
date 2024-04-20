@@ -1,5 +1,8 @@
 ![logo Harmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg?raw=true)
 
+![logo CC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/cc.png?raw=true)
+Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.  
+
 ## Architecture des systèmes informatiques
 * [Partie 1 ***** ](/1m1-archsys/1M1-ArchSys)    [Entrées-Sorties](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m1-archsys/1M1-ArchSys)
 * [Partie 2 ***** ](/1m2-archsys/1M2-ArchSys)    [Traitement](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m2-archsys/1M2-ArchSys)
