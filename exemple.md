@@ -3,8 +3,7 @@
 ## @showdialog
 
 ![Logo H@rmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg?raw=true)
-
-## Atelier 1 - Entrées/Sorties (I/O)
+![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive24.jpeg?raw=true)
 
 ℹ️ **CONSIGNES IMPORTANTES**
 > - 🗂️ **Sauvegardez TOUS vos documents**  dans votre répertoire de travail de groupe sur **OneDrive**.
@@ -17,50 +16,35 @@
 
 ## @showdialog
 
-![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive24.jpeg?raw=true)
-
-
 # Récolte de données via USB
-Programme qui envoie continuellement les mesures de la **température** et de la **luminosité** sur le port série, (**USB**) afin de les **enregistrer"" et les **traiter** dans un deuxième temps sur le PC.
+Programme qui envoit continuellement la **température** et la **luminosité** sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
 **Remarque**
-- La mesure de la **température** et de la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants (CPU, matrice de leds)
+- La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (CPU, matrice de leds)
 
-## Étape 1 - Utilisation d'une boucle infinie
-Une boucle infinie envoit continuellement les données à l'aide de la boucle ``||basic:toujours||`` (Base).
-
-## Étape 2 - Transmettre la température sur le port série. (**USB**)
-Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:température (°C)||`` (Entrée) sert à envoyer la **température** sur le port série. (**USB**) 
-
-## @showhint
+## Étape 1/3 - Programmer le Micro:Bit @showhint
+### Explications sur le programme
+Les données sont envoyées chaque seconde à l'aide de la boucle ``||basic:toujours||`` (Base).
+La **fonction** ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:température (°C)||`` (Entrée) sert à envoyer la **température** sur le port série. (**USB**) 
+La **fonction** ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:niveau d'intensité lumineuse||`` (Entrée) sert à envoyer la **luminosité** sur le port série. (**USB**)
 
 ```blocks
 basic.forever(function () {
-    serial.writeValue("temp", input.temperature())
+    serial.writeValue("temperature", input.temperature())
+    serial.writeValue("luminosite", input.lightLevel())
+    basic.pause(1000)
 })
 ```
-
-## @showhint
-
-## Étape 3 - Transmettre la luminosité sur le port série. (**USB**)
-Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:niveau d'intensité lumineuse||`` (Entrée) sert à envoyer la **luminosité** sur le port série. (**USB**)
-
-## @showhint
-
-```blocks
-basic.forever(function () {
-    serial.writeValue("temp", input.temperature())
-    serial.writeValue("lum", input.lightLevel())
-})
-```
-## @showhint
-
-## Étape 4 - Visualisez les données sur le PC.
 
 > - 🆘 Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube du RECIT](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 
-# Sauvegarde des données récoltées sur le PC
-Sauvegarde de données
+
+## Étape 2/3 - Visualiser les données sur le PC @showhint
+Pour visualiser les données sur le PC, il faut préablement transférer le programme sur le Micro:Bit.
+Ensuite, un nouveau bouton **Afficher les données Appareil** apparaît sur la gauche de l'écran
+ 
+
+## Étape 3/3 - Sauvegarder les données sur le PC @showhint
 
 # Récolte de données avec le capteur M5STACK EARTH
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
@@ -68,5 +52,5 @@ Sauvegarde de données
 # Récolte de données avec le capteur DHT11
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
 
-# Gestion de la couleur et l'intensité de la led RGB
+# Gestion de la couleur et de l'intensité de la led RGB
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive31.jpeg?raw=true)
