@@ -21,13 +21,12 @@
 
 
 ## Étape 1/5 - Récolte de données via USB
-Nous allons créer un programme qui mesure et envoie la température et la luminosité sur le port série (**USB**) afin de pouvoir visualiser les données sur le PC, dont l'algorithme est le suivant :
+Nous allons créer un programme qui envoit la température et la luminosité sur le port série (**USB**) afin de pouvoir les visualiser sur le PC.
 
+**Remarque**
+- La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants (CPU, matrice de leds)
 
-[Vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw)
-
-Pour cela nous allons utiliser la fonction « série écrire valeur » dans Communication Série
-## Exemple de code block
+Pour transmettre via **USB** ces données, nous allons utiliser la **fonction** « série écrire valeur » dans Communication Série
 ```blocks
 basic.forever(function () {
     serial.writeValue("temp", input.temperature())
@@ -35,11 +34,8 @@ basic.forever(function () {
 })
 ```
 
-## @showdialog
+Si vous ne parvenez pas à faire l'exerice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 
-FÉLICITATIONS!  Tu peux maintenant faire défiler tout le texte que tu désires sur ton Micro:bit.
-
-## @showdialog
 
 ## Étape 2/5 - Sauvegarde des données récoltées
 Sauvegarde de données
