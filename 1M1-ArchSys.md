@@ -35,6 +35,10 @@ Programme qui envoit continuellement la **température** et la **luminosité** s
 
 ## Étape 1/3 - Programmer le Micro:Bit @showhint
 
+### Explications
+
+Le bloc 
+
 Pour transmettre via **USB** ces données, il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie Communication Série.
 
 ```blocks
