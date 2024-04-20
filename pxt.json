@@ -12,7 +12,8 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "tutorial-info-cache.json"
+        "tutorial-info-cache.json",
+        "exemple.md"
     ],
     "testFiles": [
         "test.ts"
