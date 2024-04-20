@@ -17,7 +17,8 @@
 
 ## @showdialog
 
-## Comment une information est-elle transformée en donnée numérique ?
+![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive24.jpeg?raw=true)
+
 
 ## Étape 1/5 - Récolte de données via USB
 Nous allons créer un programme qui mesure et envoie la température et la luminosité sur le port série (**USB**) afin de pouvoir visualiser les données sur le PC, dont l'algorithme est le suivant :
