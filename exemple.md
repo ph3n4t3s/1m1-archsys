@@ -24,7 +24,7 @@ Programme qui envoit continuellement la **température** et la **luminosité** s
 
 ## Étape 1/3 - Programmer le Micro:Bit @showhint
 Une boucle infinie envoit continuellement les données à l'aide de la boucle ``||basic:toujours||`` (Base).
-Pour transmettre via **USB** ces données, il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie Communication Série.
+Pour transmettre les données via le port série (**USB**), il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie Communication Série.
 Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:température (°C)||`` (Entrée) sert à envoyer la **température** sur le port série. (**USB**) 
 Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:niveau d'intensité lumineuse||`` (Entrée) sert à envoyer la **luminosité** sur le port série. (**USB**)
 
