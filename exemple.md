@@ -1,4 +1,4 @@
-# 1M - Projet Mini-serre automatisée - Architectures des systèmes informatiques
+# 1M - Projet Micro-serre d'intérieure automatisée - Architecture des systèmes informatiques
 
 ## @showdialog
 
@@ -26,23 +26,6 @@ Nous allons créer un programme qui mesure et envoie la température et la lumin
 [Vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw)
 
 Pour cela nous allons utiliser la fonction « série écrire valeur » dans Communication Série
-
-
-## Sauvegarde des données récoltées
-
-## Branchement du capteur d'humidité (sol) - M5STACK EARTH
-
-## Programmation du Micro:Bit avec le capteur M5STACK EARTH
-
-## Branchement du capteur de température et d'humidité (air) - DHT11
-
-## Programmation du Micro:Bit avec le capteur DHT11
-
-## Branchement de l'actuateur - Led RGB
-
-## Programmation du Micro:Bit avec la led RGB
-
-
 ## Exemple de code block
 ```blocks
 basic.forever(function () {
@@ -51,9 +34,6 @@ basic.forever(function () {
 })
 ```
 
-Pour cela nous allons utiliser la fonction « série écrire valeur » dans Communication Série
-[Vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw)
-
 ## @showdialog
 
 FÉLICITATIONS!  Tu peux maintenant faire défiler tout le texte que tu désires sur ton Micro:bit.
@@ -61,6 +41,7 @@ FÉLICITATIONS!  Tu peux maintenant faire défiler tout le texte que tu désires
 ## @showdialog
 
 ## Étape 2/5 - Sauvegarde des données récoltées
+Sauvegarde de données
 
 ## Étape 3/5 - Programmation du Micro:Bit avec le capteur M5STACK EARTH
 Branchement du capteur d'humidité (sol) - M5STACK EARTH
