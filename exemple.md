@@ -11,7 +11,7 @@
 > - 🛤️ **Organisez** et  **planifiez** votre travail de groupe. (Qui ? Fait quoi ? quand ?) 
 > - 🧑‍🧑‍🧒 **Communiquez** entre vous.
 > - 🧭 **Laissez des traces de **TOUTES vos expérimentations** en prenant des **notes**, des **photos** (avec votre téléphone portable) ou des **captures d'écran**.
-> - ⚠️ Mettez à jour le journal de bord à **CHAQUE séance**.⚠️
+> - ⚠️ Mettez à jour le journal de bord tout au long de **CHAQUE séance**.⚠️
 > - 🆘 Si vous êtes **perdu** servez-vous des **guides** et des **ressources** qui sont à votre disposition dans le **répertoire du projet** sur **OneDrive**.
 
 ## @showdialog
@@ -23,7 +23,11 @@ Programme qui envoit continuellement la **température** et la **luminosité** s
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (CPU, matrice de leds)
 
 ## Étape 1/3 - Programmer le Micro:Bit @showhint
+Une boucle infinie envoit continuellement les données à l'aide de la boucle ``||basic:toujours||`` (Base).
 Pour transmettre via **USB** ces données, il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie Communication Série.
+Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:température (°C)||`` (Entrée) sert à envoyer la **température** sur le port série. (**USB**) 
+Le bloc ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:niveau d'intensité lumineuse||`` (Entrée) sert à envoyer la **luminosité** sur le port série. (**USB**)
+
 
 ```blocks
 serial.writeLine(timeanddate.dateTime())
@@ -35,18 +39,18 @@ basic.forever(function () {
 })
 ```
 
-Si vous ne parvenez pas à faire l'exerice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
+> - 🆘 Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube du RECIT](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 
 
 ## Étape 2/3 - Visualiser les données sur le PC @showhint
 
 ## Étape 3/3 - Sauvegarder les données sur le PC @showhint
 
-# Programmation du Micro:Bit avec le capteur M5STACK EARTH
+# Récolte de données avec le capteur M5STACK EARTH
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
 
-# Programmation du Micro:Bit avec le capteur DHT11
+# Récolte de données avec le capteur DHT11
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
 
-# Programmation du Micro:Bit avec la led RGB
+# Gestion de la couleur et de l'intensité de la led RGB
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive31.jpeg?raw=true)
