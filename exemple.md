@@ -17,16 +17,9 @@
 
 ## @showdialog
 
-Faire défiler un mot sur le Micro:bit
-
-![Afficher-un-mot](https://github.com/recitmstmam/mes-tutoriels/blob/master/images/recitmst.gif?raw=true)
-
-## Étape 1/3
-
 ## Comment une information est-elle transformée en donnée numérique ?
 
-
-## Récolte de données via USB
+## Étape 1/5 - Récolte de données via USB
 Nous allons créer un programme qui mesure et envoie la température et la luminosité sur le port série (**USB**) afin de pouvoir visualiser les données sur le PC, dont l'algorithme est le suivant :
 
 
@@ -50,7 +43,6 @@ Pour cela nous allons utiliser la fonction « série écrire valeur » dans Co
 ## Programmation du Micro:Bit avec la led RGB
 
 
-
 ## Exemple de code block
 ```blocks
 basic.forever(function () {
@@ -59,6 +51,22 @@ basic.forever(function () {
 })
 ```
 
+Pour cela nous allons utiliser la fonction « série écrire valeur » dans Communication Série
+[Vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw)
+
 ## @showdialog
 
 FÉLICITATIONS!  Tu peux maintenant faire défiler tout le texte que tu désires sur ton Micro:bit.
+
+## @showdialog
+
+## Étape 2/5 - Sauvegarde des données récoltées
+
+## Étape 3/5 - Programmation du Micro:Bit avec le capteur M5STACK EARTH
+Branchement du capteur d'humidité (sol) - M5STACK EARTH
+
+## Étape 4/5 - Programmation du Micro:Bit avec le capteur DHT11
+Branchement du capteur de température et d'humidité (air) - DHT11
+
+## Étape 5/5 - Programmation du Micro:Bit avec la led RGB
+Branchement de l'actuateur - Led RGB
