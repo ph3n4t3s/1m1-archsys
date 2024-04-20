@@ -1,9 +1,8 @@
 # afficher-mot
 
 ## @showdialog
-Ce tutoriel a été créer par:
 
-![Logo Harmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg)
+![LogoHarmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg)
   
 ## @showdialog
 
