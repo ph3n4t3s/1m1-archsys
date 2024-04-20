@@ -42,7 +42,7 @@ basic.forever(function () {
 ## Étape 2/3 - Visualiser les données sur le PC @showhint
 Pour visualiser les données sur le PC, il faut préablement transférer le programme sur le Micro:Bit.
 Ensuite, un nouveau bouton **Afficher les données Appareil** apparaît sur la gauche de l'écran
- 
+![Télécharger et visualiser les données sur le PC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Record1.gif?raw=true) 
 
 ## Étape 3/3 - Sauvegarder les données sur le PC @showhint
 
