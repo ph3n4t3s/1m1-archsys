@@ -1,5 +1,5 @@
 basic.forever(function () {
-    serial.writeValue("température", input.temperature())
-    serial.writeValue("luminosité", input.lightLevel())
+    serial.writeValue("temperature", input.temperature())
+    serial.writeValue("luminosite", input.lightLevel())
     basic.pause(1000)
 })
