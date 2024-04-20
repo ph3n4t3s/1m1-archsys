@@ -1,13 +1,11 @@
 # 1M - Projet Micro-serre automatisée
 ## Architectures des systèmes informatiques
-### Atelier 1
+### Atelier #1 - Entrées-Sorties
 [Source](https://github.com/ph3n4t3s/1m1-archsys/blob/master/1m1-ArchSys)
 
 ## @showdialog
 
 ![Logo H@rmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg)
-
-==Bienvenue dans l’atelier #1 consacré aux entrées-sorties==
 
 ### ℹ️CONSIGNES IMPORTANTES
 > - 🗂️**Sauvegardez TOUS vos documents**  dans votre répertoire de travail de groupe sur **OneDrive**.
@@ -21,7 +19,7 @@
 
 ## @showdialog
 
-## Partie #1/3 - Les entrées sorties
+## Partie #1/3 - Entrées-Sorties
 ###Comment une information est-elle transformée en donnée numérique ?
 
 ### Informations pratiques
