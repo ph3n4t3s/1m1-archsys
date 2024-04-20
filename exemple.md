@@ -22,6 +22,27 @@
 ## Étape 1/5 - Récolte de données via USB
 Nous allons créer un programme qui mesure et envoie la température et la luminosité sur le port série (**USB**) afin de pouvoir visualiser les données sur le PC, dont l'algorithme est le suivant :
 
+
+[Vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw)
+
+Pour cela nous allons utiliser la fonction « série écrire valeur » dans Communication Série
+
+
+## Sauvegarde des données récoltées
+
+## Branchement du capteur d'humidité (sol) - M5STACK EARTH
+
+## Programmation du Micro:Bit avec le capteur M5STACK EARTH
+
+## Branchement du capteur de température et d'humidité (air) - DHT11
+
+## Programmation du Micro:Bit avec le capteur DHT11
+
+## Branchement de l'actuateur - Led RGB
+
+## Programmation du Micro:Bit avec la led RGB
+
+
 ## Exemple de code block
 ```blocks
 basic.forever(function () {
