@@ -1,5 +1,5 @@
 # 1M - Projet Mini-serre automatisée - Architectures des systèmes informatiques
-[Source](https://github.com/ph3n4t3s/1m1-archsys/blob/master/1M - ArchSys)
+[Source](https://github.com/ph3n4t3s/1m1-archsys/blob/master/1m1-ArchSys)
 
 ## @showdialog
 
