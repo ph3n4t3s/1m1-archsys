@@ -41,7 +41,7 @@ basic.forever(function () {
 ## Étape 2/2 - Transférer le programme. Visualiser et sauvegarder les données sur le PC @showhint
 Pour visualiser les données sur le PC, il faut préablement transférer le programme sur le Micro:Bit.
 Ensuite, un nouveau bouton **Afficher les données Appareil** apparaît sur la gauche de l'écran
-![Téléchargez le programme. Visualisez et sauvegardez les données sur le PC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Record1.gif?raw=true) 
+![Téléchargez le programme. Visualisez et sauvegardez les données sur le PC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1m1-ArchSys-1.gif?raw=true) 
 
 
 # Récolte de données avec le capteur M5STACK EARTH
