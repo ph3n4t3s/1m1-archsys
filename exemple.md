@@ -58,6 +58,14 @@ Ce capteur permet de mesurer l'humidité du sol.
 ## Étape 1/3 - Programmer le Micro:Bit @showhint
 ### Explications sur le programme
 
+```blocks
+basic.forever(function () {
+    serial.writeValue("D Out", pins.digitalReadPin(DigitalPin.P0))
+    serial.writeValue("A Out", pins.analogReadPin(AnalogPin.P0))
+    basic.pause(100)
+})
+```
+
 ## Étape 2/3 - Transférer le programme. Visualiser et sauvegarder les données sur le PC @showhint
 Pour visualiser et sauvarger les données sur le PC, il faut :
 > 1. Transférer le programme sur le Micro:Bit.
