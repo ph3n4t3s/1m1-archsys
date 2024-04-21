@@ -22,7 +22,7 @@ Programme qui envoit continuellement la **température** et la **luminosité** s
 **Remarque**
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (CPU, matrice de leds)
 
-## Étape 1/2 - Programmer le Micro:Bit @showhint
+## Étape 1/3 - Programmer le Micro:Bit @showhint
 ### Explications sur le programme
 Les données sont envoyées chaque seconde à l'aide de la boucle ``||basic:toujours||`` (Base).
 La **fonction** ``||Communication Série:série écrire valeur||`` (Communication Série) et le bloc ``||Entrée:température (°C)||`` (Entrée) sert à envoyer la **température** sur le port série. (**USB**) 
@@ -38,17 +38,78 @@ basic.forever(function () {
 
 > - 🆘 Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube du RECIT](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 
-## Étape 2/2 - Transférer le programme. Visualiser et sauvegarder les données sur le PC @showhint
-Pour visualiser les données sur le PC, il faut préablement transférer le programme sur le Micro:Bit.
-Ensuite, un nouveau bouton **Afficher les données Appareil** apparaît sur la gauche de l'écran
+## Étape 2/3 - Transférer le programme. Visualiser et sauvegarder les données sur le PC @showhint
+Pour visualiser et sauvarger les données sur le PC, il faut :
+> 1. Transférer le programme sur le Micro:Bit.
+> 2. Cliquer sur le bouton **Afficher les données Appareil** pour visualiser les données.
+> 3. Sauvegarder les données dans un fichier .csv 
+
 ![Téléchargez le programme. Visualisez et sauvegardez les données sur le PC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Record1.gif?raw=true) 
 
+## Étape 3/3 - Documenter
+> 1. Sauvegardez **TOUTES** les traces de votre expérimentation. (vos **notes**, les **données récoltées** et vos **copies d'écran**)
+> 2. Mettez à jour le journal de bord du projet.
 
 # Récolte de données avec le capteur M5STACK EARTH
+Ce capteur permet de mesurer l'humidité du sol.
+
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
 
+## Étape 1/3 - Programmer le Micro:Bit @showhint
+### Explications sur le programme
+
+```blocks
+basic.forever(function () {
+    serial.writeValue("D Out", pins.digitalReadPin(DigitalPin.P0))
+    serial.writeValue("A Out", pins.analogReadPin(AnalogPin.P0))
+    basic.pause(100)
+})
+```
+
+## Étape 2/3 - Transférer le programme. Visualiser et sauvegarder les données sur le PC @showhint
+Pour visualiser et sauvarger les données sur le PC, il faut :
+> 1. Transférer le programme sur le Micro:Bit.
+> 2. Cliquer sur le bouton **Afficher les données Appareil** pour visualiser les données.
+> 3. Sauvegarder les données dans un fichier .csv 
+
+![Téléchargez le programme. Visualisez et sauvegardez les données sur le PC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Record2.gif?raw=true)
+
+## Étape 3/3 - Documenter
+> 1. Sauvegardez **TOUTES** les traces de votre expérimentation. (vos **notes**, les **données récoltées** et vos **copies d'écran**)
+> 2. Mettez à jour le journal de bord du projet.
+
 # Récolte de données avec le capteur DHT11
+Ce capteur permet de mesurer la température et l'humidité de l'air.
+
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
 
+## Étape 1/3 - Programmer le Micro:Bit @showhint
+### Explications sur le programme
+
+## Étape 2/3 - Transférer le programme. Visualiser et sauvegarder les données sur le PC @showhint
+Pour visualiser et sauvarger les données sur le PC, il faut :
+> 1. Transférer le programme sur le Micro:Bit.
+> 2. Cliquer sur le bouton **Afficher les données Appareil** pour visualiser les données.
+> 3. Sauvegarder les données dans un fichier .csv 
+
+## Étape 3/3 - Documenter
+> 1. Sauvegardez **TOUTES** les traces de votre expérimentation. (vos **notes**, les **données récoltées** et vos **copies d'écran**)
+> 2. Mettez à jour le journal de bord du projet.
+
 # Gestion de la couleur et de l'intensité de la led RGB
+La led RGB permet d'être contrôlée par les trois composantes Rouge-Vert-Bleu.
+
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive31.jpeg?raw=true)
+
+## Étape 1/3 - Programmer le Micro:Bit @showhint
+### Explications sur le programme
+
+## Étape 2/3 - Transférer le programme. Visualiser et sauvegarder les données sur le PC @showhint
+Pour visualiser et sauvarger les données sur le PC, il faut :
+> 1. Transférer le programme sur le Micro:Bit.
+> 2. Cliquer sur le bouton **Afficher les données Appareil** pour visualiser les données.
+> 3. Sauvegarder les données dans un fichier .csv 
+
+## Étape 3/3 - Rédaction du rapport de l'atelier
+> 1. Sauvegardez **TOUTES** les traces de votre expérimentation. (vos **notes**, les **données récoltées** et vos **copies d'écran**)
+> 2. Mettez à jour le journal de bord du projet.
