@@ -27,7 +27,7 @@
 
 # Récolte de données via USB
 
-Programme qui envoit continuellement la **température** et la **luminosité** sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
+Le programme envoit continuellement la **température** et la **luminosité** sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
 **Remarque**
 
@@ -62,8 +62,11 @@ basic.forever(function () {
 Si vous ne parvenez pas à faire l'exerice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 
 ## Étape 2/3 - Visualiser les données sur le PC @showhint
+Utilisez une application de traitement de données (Excel, Numbers, Google Sheet) pour visualiser et/ou traiter les données
 
-## Étape 3/3 - Sauvegarder les données sur le PC @showhint
+## Étape 3/3 - Interpréter et analyser les données sur le PC @showhint
+Avant tout il est nécessaire de valider les données récoltées, et supprimer les données inutiles ou incorrectes.
+
 
 # Programmation du Micro:Bit avec le capteur M5STACK EARTH
 
