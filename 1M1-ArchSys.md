@@ -1,4 +1,3 @@
-
 # 1M - Projet Micro-serre d'intérieure automatisée - Architecture des systèmes informatiques
 
 ## @showdialog
@@ -7,7 +6,7 @@
 
 ![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive24.jpeg?raw=true)
 ![logo CC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/cc.png?raw=true)
-Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.  
+Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.
 
 ## @showdialog
 
@@ -56,25 +55,35 @@ basic.forever(function () {
 ```
 
 ## Sauvegarder les données sur le PC @showhint
+
 Sauvegardez vos les données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 
 ## Visualiser les données sur le PC @showhint
+
 Utilisez une application de traitement de données (Excel, Numbers, Google Sheet) pour visualiser et/ou traiter les données.
 
-
 ## Interpréter et analyser les données sur le PC @showhint
+
 Avant tout il est nécessaire de valider les données récoltées, et supprimer les données inutiles ou incorrectes.
 
-
 ## Mesure de l'humidité du sol @showhint
+
 Capteur - M5STACK EARTH
+=======================
+
+## Mesurer l'humidité du sol
+
+Capteur - M5STACK EARTH @showhint
+
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
 
 ## Mesure de la température et de l'humidité de l'air @showhint
+
 Capteur - DHT11
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
 
 ## Changer la couleur d'une led @showhint
+
 Actuateur - Led RGB
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive31.jpeg?raw=true)
 
@@ -93,28 +102,31 @@ basic.forever(function () {
 ```
 
 **Astuces & conseils**
+
 - Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 - Vous pouvez sauvegarder votre programme pour chaque étape en copiant le contenu du fichier main.blocks comme le montre l'exemple ci-dessous.
-
-
-
 
 ___QUE FAIRE QUAND CELA NE FONCTIONNE PAS ?___
 
 ## Étape 1/4 - Vérifier les connexions
+
 Par moment, il est préférable de tout débrancher et tout rebranché en respectant précisemment le **schéma de câblage.**
 
 ## Étape 2/4 - Vérifier la connexion Micro:Bit
+
 Assurez-vous que le Micro:Bit soit inséré correctement (et dans le bon sens) dans le bouclier. (shield)
 Contrôlez la connexion du câble Micro-USB
+
 - Si le câble est mal branché, le transfert du programme et la récolte de données ne pourront pas fonctionner, car la liaison entre le Micro:Bit et le PC ne sera pas établie.
 
 ## Étape 3/4 - Vérifier les ports d'entrées-sorties (programmation)
+
 Les données sont soient :
-1. Récoltées en entrée depuis un capteur (input) 
+
+1. Récoltées en entrée depuis un capteur (input)
 2. Envoyées en sortie sur un actuateur (output).
 
-Le Micro:Bit dispose de 3 ports (P0, P1, P2) qui sont prévus pour récolter ou envoyer des données. Mais il faut lui indiquer 
+Le Micro:Bit dispose de 3 ports (P0, P1, P2) qui sont prévus pour récolter ou envoyer des données. Mais il faut lui indiquer
 Quel port utilise le capteur/actuateur ?
 Est-ce un port en entrée ou en sortie ?
 
