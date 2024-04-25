@@ -54,13 +54,16 @@ basic.forever(function () {
 
 ```
 
+## Téléchargez le programme et Visualiser les données sur le PC @showhint
+
+Il est important de télécharger le programme à chaque fois que vous le modifiez.
+Lorsque le téléchargement sera terminé, un nouveau bouton "Afficher données Appareil" doit apparaître sur la partie gauche de l'écran.
+
+Utilisez une application de traitement de données (Excel, Numbers, Google Sheet) pour visualiser et/ou traiter les données.
+
 ## Sauvegarder les données sur le PC @showhint
 
 Sauvegardez vos les données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
-
-## Visualiser les données sur le PC @showhint
-
-Utilisez une application de traitement de données (Excel, Numbers, Google Sheet) pour visualiser et/ou traiter les données.
 
 ## Interpréter et analyser les données sur le PC @showhint
 
