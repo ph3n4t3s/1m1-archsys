@@ -6,6 +6,8 @@
 ![Logo H@rmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg?raw=true)
 
 ![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive24.jpeg?raw=true)
+![logo CC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/cc.png?raw=true)
+Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.  
 
 ## @showdialog
 
@@ -35,17 +37,13 @@ Le programme envoie chaque seconde la **température** et la **luminosité** sur
 
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
 
-## Étape 1/4 - Programmer le Micro:Bit @showhint
+## Programmer le Micro:Bit @showhint
 
-Pour transmettre Les données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie **Communication Série**. Ceci va définir le nom et la valeur mesurée. Nous trouverons les variables prédéfinies pour la température ||Entrée:température (° C)|| et et pour la luminosité ||Entrée:niveau d'intensité lumineuse|| dans la catégorie **Entrée**.
+Pour transmettre Les données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie **Communication Série**. Ceci va définir le nom et la valeur mesurée. Nous trouverons les variables prédéfinies pour la température ``||Entrée:température (° C)||`` et et pour la luminosité ``||Entrée:niveau d'intensité lumineuse||`` dans la catégorie **Entrée**.
 
 ```blocks
 
-serial.writeLine(timeanddate.dateTime())
-
 basic.forever(function () {
-
-    serial.writeLine(timeanddate.time(timeanddate.TimeFormat.HHMMSS24hr))
 
     serial.writeValue("temperature", input.temperature())
 
@@ -57,28 +55,27 @@ basic.forever(function () {
 
 ```
 
-Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
+## Sauvegarder les données sur le PC @showhint
+Sauvegardez vos les données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 
-## Étape 2/4 - Sauvegarder les données sur le PC @showhint
-Chaque fois que vous faites des essais, 
+## Visualiser les données sur le PC @showhint
+Utilisez une application de traitement de données (Excel, Numbers, Google Sheet) pour visualiser et/ou traiter les données.
 
-## Étape 3/4 - Visualiser les données sur le PC @showhint
-Utilisez une application de traitement de données (Excel, Numbers, Google Sheet) pour visualiser et/ou traiter les données
 
-## Étape 3/4 - Interpréter et analyser les données sur le PC @showhint
+## Interpréter et analyser les données sur le PC @showhint
 Avant tout il est nécessaire de valider les données récoltées, et supprimer les données inutiles ou incorrectes.
 
 
-## Capteur - M5STACK EARTH @showhint
-
+## Mesure de l'humidité du sol @showhint
+Capteur - M5STACK EARTH
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
 
-## Capteur - DHT11 @showhint
-
+## Mesure de la température et de l'humidité de l'air @showhint
+Capteur - DHT11
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
 
-## Actuateur - Led RGB @showhint
-
+## Changer la couleur d'une led @showhint
+Actuateur - Led RGB
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive31.jpeg?raw=true)
 
 ```blocks
@@ -95,7 +92,14 @@ basic.forever(function () {
 })
 ```
 
-___Que faire quand cela ne fonctionne pas ?___
+**Astuces & conseils**
+- Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
+- Vous pouvez sauvegarder votre programme pour chaque étape en copiant le contenu du fichier main.blocks comme le montre l'exemple ci-dessous.
+
+
+
+
+___QUE FAIRE QUAND CELA NE FONCTIONNE PAS ?___
 
 ## Étape 1/4 - Vérifier les connexions
 Par moment, il est préférable de tout débrancher et tout rebranché en respectant précisemment le **schéma de câblage.**
@@ -116,4 +120,4 @@ Est-ce un port en entrée ou en sortie ?
 
 ## Étape 4/4 - Vérifier la temporalité
 
-> Lorsque le Micro:Bit envoye ou reçoit de données, il peut le faire de manière beaucoup trop rapide pour le capteur ou l'actuateur, raison pour laquelle il faut insére une pause ``||basic:pause(temps)||``
+> Lorsque le Micro:Bit envoie ou reçoit des données, il peut le faire de manière beaucoup trop rapide pour le capteur ou l'actuateur, raison pour laquelle il faut insére une pause ``||basic:pause(temps)||``
