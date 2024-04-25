@@ -35,17 +35,13 @@ Le programme envoie chaque seconde la **température** et la **luminosité** sur
 
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
 
-## Étape 1/4 - Programmer le Micro:Bit @showhint
+## Programmation du Micro:Bit @showhint
 
 Pour transmettre Les données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie **Communication Série**. Ceci va définir le nom et la valeur mesurée. Nous trouverons les variables prédéfinies pour la température ||Entrée:température (° C)|| et et pour la luminosité ||Entrée:niveau d'intensité lumineuse|| dans la catégorie **Entrée**.
 
 ```blocks
 
-serial.writeLine(timeanddate.dateTime())
-
 basic.forever(function () {
-
-    serial.writeLine(timeanddate.time(timeanddate.TimeFormat.HHMMSS24hr))
 
     serial.writeValue("temperature", input.temperature())
 
@@ -57,19 +53,18 @@ basic.forever(function () {
 
 ```
 
-Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
-
-## Étape 2/4 - Sauvegarder les données sur le PC @showhint
+## Sauvegarder les données sur le PC @showhint
 Chaque fois que vous faites des essais, 
 
-## Étape 3/4 - Visualiser les données sur le PC @showhint
+## Visualiser les données sur le PC @showhint
 Utilisez une application de traitement de données (Excel, Numbers, Google Sheet) pour visualiser et/ou traiter les données
 
-## Étape 3/4 - Interpréter et analyser les données sur le PC @showhint
+## Interpréter et analyser les données sur le PC @showhint
 Avant tout il est nécessaire de valider les données récoltées, et supprimer les données inutiles ou incorrectes.
 
 
-## Capteur - M5STACK EARTH @showhint
+## Mesurer l'humidité du sol
+Capteur - M5STACK EARTH @showhint
 
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
 
