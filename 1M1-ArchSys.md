@@ -54,18 +54,19 @@ basic.forever(function () {
 
 ```
 
-## Téléchargez le programme et Visualiser les données sur le PC @showhint
+## Téléchargement du programme et visualisation des données @showhint
 
-Il est important de télécharger le programme à chaque fois que vous le modifiez.
-Lorsque le téléchargement sera terminé, un nouveau bouton "Afficher données Appareil" doit apparaître sur la partie gauche de l'écran.
+Il est important de télécharger le programme à chaque **modification**.
+Lorsque le téléchargement est terminé, un nouveau bouton "Afficher données Appareil" doit apparaître sur la partie gauche de l'écran.
 
-Utilisez une application de traitement de données (Excel, Numbers, Google Sheet) pour visualiser et/ou traiter les données.
+![Téléchagement-visualisation-sauvegarde](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1-Transfert-Visualisation-Sauvegarde.gif.gif?raw=true)
 
-## Sauvegarder les données sur le PC @showhint
 
 Sauvegardez vos les données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 
-## Interpréter et analyser les données sur le PC @showhint
+Utilisez une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter les données.
+
+### Interprétation et analyser des données @showhint
 
 Avant tout il est nécessaire de valider les données récoltées, et supprimer les données inutiles ou incorrectes.
 
