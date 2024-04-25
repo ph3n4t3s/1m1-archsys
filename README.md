@@ -4,9 +4,9 @@
 Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.  
 
 ## Architecture des systèmes informatiques
-* [Partie 1 ***** ](/1m1-archsys/1M1-ArchSys)    [Entrées-Sorties](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m1-archsys/1M1-ArchSys)
-* [Partie 2 ***** ](/1m2-archsys/1M2-ArchSys)    [Traitement](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m2-archsys/1M2-ArchSys)
-* [Partie 3 ***** ](/1m3-archsys/1M3-ArchSys)    [Sauvegarde fichier](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m3-archsys/1M3-ArchSys)
+* [Partie 1 ***** ](/1m1-archsys/1M1-ArchSys)    [Entrées-Sorties des informations](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m1-archsys/1M1-ArchSys)
+* [Partie 2 ***** ](/1m2-archsys/1M2-ArchSys)    [Traitement des données](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m2-archsys/1M2-ArchSys)
+* [Partie 3 ***** ](/1m3-archsys/1M3-ArchSys)    [Sauvegarde dans un fichier](https://makecode.microbit.org/#tutorial:github:ph3n4t3s/1m3-archsys/1M3-ArchSys)
 
 
 > Ouvrir cette page à [https://ph3n4t3s.github.io/1m1-archsys/](https://ph3n4t3s.github.io/1m1-archsys/)
