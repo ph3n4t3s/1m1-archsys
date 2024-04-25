@@ -1,5 +1,5 @@
 basic.forever(function () {
-    serial.writeValue("D Out", pins.digitalReadPin(DigitalPin.P0))
-    serial.writeValue("A Out", pins.analogReadPin(AnalogPin.P0))
-    basic.pause(100)
+    serial.writeValue("temperature", input.temperature())
+    serial.writeValue("luminosite", input.lightLevel())
+    basic.pause(1000)
 })
