@@ -38,7 +38,7 @@ Le programme envoie chaque seconde la **température** et la **luminosité** sur
 
 ## Programmer le Micro:Bit @showhint
 
-Pour transmettre les données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie **Communication Série**. Ceci va définir le nom et la valeur mesurée. Nous trouverons les variables prédéfinies pour la température ``||Entrée:température (° C)||`` et et pour la luminosité ``||Entrée:niveau d'intensité lumineuse||`` dans la catégorie **Entrée**.
+Pour transmettre les données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série** et la déposer dans la boucle toujours ``||basic:toujours||``. Ceci va définir le nom et la valeur mesurée. Nous trouverons les variables prédéfinies pour la température ``||Entrée:température (° C)||`` et et pour la luminosité ``||Entrée:niveau d'intensité lumineuse||`` dans la catégorie **Entrée**.
 
 ```blocks
 basic.forever(function () {
