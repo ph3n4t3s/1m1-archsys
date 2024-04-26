@@ -13,22 +13,16 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 ℹ️ **CONSIGNES IMPORTANTES**
 
 > - 🗂️ **Sauvegardez TOUS vos documents**  dans votre répertoire de travail de groupe sur **OneDrive**.
-
 > - 📝 **Prenez des notes** (sous forme manuscrite ou numérique, peu importe comment, **mais prenez des notes !!!** 😂)
-
 > - 🛤️ **Organisez** et  **planifiez** votre travail de groupe. (Qui ? Fait quoi ? quand ?)
-
 > - 🧑‍🧑‍🧒 **Communiquez** entre vous.
-
 > - 🧭 **Laissez des traces de **TOUTES vos expérimentations** en prenant des **notes**, des **photos** (avec votre téléphone portable) ou des **captures d'écran**.
-
 > - ⚠️ Mettez à jour le journal de bord à **CHAQUE séance**.⚠️
-
 > - 🆘 Si vous êtes **perdu** servez-vous des **guides** et des **ressources** qui sont à votre disposition dans le **répertoire du projet** sur **OneDrive**.
 
-___**Utilisez ce tutoriel pour remplir votre rapport d'atelier**___
+___**Utilisez ce tutoriel pour rédiger votre rapport d'atelier**___
 
-# Récolter des données via USB @showhint
+## Récolter des données via USB @showhint
 
 Le programme envoie chaque seconde la **température** et la **luminosité** sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
