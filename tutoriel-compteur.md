@@ -22,7 +22,8 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 
 ___**Utilisez ce tutoriel pour rédiger votre rapport d'atelier**___
 
-## Récolter des données via USB @showhint
+
+## Récolter des données via USB
 
 Le programme envoie chaque seconde la **température** et la **luminosité** sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
