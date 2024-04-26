@@ -23,7 +23,7 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 ___**Utilisez ce tutoriel pour rédiger votre rapport d'atelier**___
 
 
-## Récolter des données via USB
+## Récolter des données via le port série (**USB**) @showdialog
 
 Le programme envoie chaque seconde la **température** et la **luminosité** sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
@@ -31,7 +31,7 @@ Le programme envoie chaque seconde la **température** et la **luminosité** sur
 
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
 
-## Programmer le Micro:Bit @showhint
+### Programmer le Micro:Bit @showhint
 
 Pour transmettre les données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie **Communication Série**. Ceci va définir le nom et la valeur mesurée. Nous trouverons les variables prédéfinies pour la température ``||Entrée:température (° C)||`` et et pour la luminosité ``||Entrée:niveau d'intensité lumineuse||`` dans la catégorie **Entrée**.
 
@@ -43,7 +43,7 @@ basic.forever(function () {
 })
 ```
 
-## Téléchargement du programme et visualisation des données @showhint
+### Téléchargement du programme et visualisation des données @showhint
 
 - Il est important de télécharger le programme à chaque **modification**.
 
