@@ -15,7 +15,8 @@
         "README.md",
         "tutorial-info-cache.json",
         "img/index-img.md",
-        "tutoriel-compteur.md"
+        "tutoriel-compteur.md",
+        "1M1ArchSys.md"
     ],
     "testFiles": [
         "test.ts"
