@@ -1,6 +1,6 @@
 {
     "name": "1M1-ArchSys",
-    "version": "0.7.3",
+    "version": "0.8.0",
     "description": "",
     "dependencies": {
         "core": "*",
