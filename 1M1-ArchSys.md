@@ -16,6 +16,8 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 
 ![Manipulations et activités de l'atelier #1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive35.png?raw=true)
 
+## @showdialog
+
 ## Récolter des données du Micro:MicroBit via le port série USB @showhint
 
 Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations. 
