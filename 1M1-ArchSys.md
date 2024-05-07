@@ -47,7 +47,7 @@ basic.forever(function () {
 })
 ``` 
 
-### Téléchargement du programme et visualisation des données @showdialog
+## Téléchargement du programme et visualisation des données @showdialog
 
 - Il est important de télécharger le programme sur le MicroBit à chaque **modification**.
 
@@ -64,7 +64,7 @@ Touchez le CPU pour faire varier la température, et éclairez avec votre smartp
 - Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 - N'oubliez pas de sauvegarder votre programme à chaque étape.
 
-### Interprêtation et analyse des données @showdialog
+### Interprêtation et analyse des données
 
 **Astuces** :
 Vous pouvez utiliser une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
