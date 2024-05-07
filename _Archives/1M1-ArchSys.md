@@ -4,31 +4,17 @@
 
 ![Logo H@rmonia](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Harmonia_v4.jpg?raw=true)
 
-![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive24.jpeg?raw=true)
+![Atelier 1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive3.png?raw=true)
 ![logo CC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/cc.png?raw=true)
 Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.
 
 ## @showdialog
 
-ℹ️ **CONSIGNES IMPORTANTES**
+![INFORMATIONS IMPORTANTES](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive3.png?raw=true)
 
-> - 🗂️ **Sauvegardez TOUS vos documents**  dans votre répertoire de travail de groupe sur **OneDrive**.
+## @showdialog
 
-> - 📝 **Prenez des notes** (sous forme manuscrite ou numérique, peu importe comment, **mais prenez des notes !!!** 😂)
-
-> - 🛤️ **Organisez** et  **planifiez** votre travail de groupe. (Qui ? Fait quoi ? quand ?)
-
-> - 🧑‍🧑‍🧒 **Communiquez** entre vous.
-
-> - 🧭 **Laissez des traces de **TOUTES vos expérimentations** en prenant des **notes**, des **photos** (avec votre téléphone portable) ou des **captures d'écran**.
-
-> - ⚠️ Mettez à jour le journal de bord à **CHAQUE séance**.⚠️
-
-> - 🆘 Si vous êtes **perdu** servez-vous des **guides** et des **ressources** qui sont à votre disposition dans le **répertoire du projet** sur **OneDrive**.
-
-___**Utilisez ce tutoriel pour remplir votre rapport d'atelier**___
-
-# Récolter des données via USB @showhint
+# Récolter des données via USB 
 
 Le programme envoie chaque seconde la **température** et la **luminosité** sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
@@ -47,6 +33,7 @@ basic.forever(function () {
     basic.pause(1000)
 })
 ```
+## @showdialog
 
 ## Téléchargement du programme et visualisation des données @showhint
 
@@ -65,6 +52,8 @@ Touchez le CPU pour faire varier la température, et éclairez avec votre smartp
 **IMPORTANT** : Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 
 Vous pouvez utiliser une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
+
+## @showdialog
 
 ### Interprétation et analyser des données @showhint
 
@@ -90,6 +79,7 @@ basic.forever(function () {
     basic.pause(1000)
 })
 ```
+
 ![Récolte de données](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/2-MesuresM5Stack.gif?raw=true)
 
 Rapportez votre rapport d'atelier :
