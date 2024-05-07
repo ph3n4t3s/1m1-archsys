@@ -28,12 +28,18 @@ sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvega
 
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
 
-## Programmation du Micro:Bit @showhint
+### Programmation du Micro:Bit @showhint
 
 Pour transmettre ces données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série** 
-et la déposer dans la boucle toujours ``||basic:toujours||``, c qui va définir le nom et la valeur mesurée. 
-Nous trouverons les variables prédéfinies pour la température ``||Entrée:température (° C)||`` et et pour la luminosité ``||Entrée:niveau d'intensité lumineuse||`` dans la catégorie **Entrée**.
-À la fin de la boucle nous insérons une attente ``||basic:pause (ms)||`` d'une 1 seconde.
+et la déposer dans la boucle toujours ``||basic:toujours||``, ce qui va définir le nom et la valeur mesurée. 
+
+**ASTUCE**
+
+La variable prédéfinie pour la température ``||Entrée:température (° C)||``
+et celle pour la luminosité ``||Entrée:niveau d'intensité lumineuse||`` se trouvent dans la catégorie **Entrée**.
+
+À la fin de la boucle nous insérons une pause ``||basic:pause (ms)||`` d'une 1 seconde avant de recommencer la boucle.
+
 ```blocks
 basic.forever(function () {
     serial.writeValue("temperature", input.temperature())
@@ -62,7 +68,7 @@ Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites d
 
 ## @showdialog
 
-### Interprétation et analyser des données
+## Interprêtation et analyse des données
 
 **Astuces** :
 Vous pouvez utiliser une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
@@ -70,50 +76,52 @@ Vous pouvez utiliser une application de traitement de données tel que Excel, Nu
 **IMPORTANT** : 
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
 
-## Mesure de l'humidité de l'air du sol
+## Situation 1 
+Dans cet exemple nous allons utliser un capteur pour mesurer l'humidité du sol, 
+et envoyer la valeur mesurée sur le PC via le port série **USB**.
 
-### Schéma de câblage
-
-![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive36.png?raw=true)
-
-## @showdialog
+### Mesure de l'humidité du sol
+Le shéma de câblage ci-dessous montre la façon dont le capteur est connecté au MicroBit.
+![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive36.png?raw=true)
 
 ### Programmation du Micro:Bit
 
-Le programme utilise la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie **Communication Série** pour envoyer chaque seconde D Out et A Out sur le port série (**USB**).
+Le programme utilise la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie **Communication Série**,
+pour envoyer chaque seconde la valeur de :
 
 - D Out : Digital Out -> Valeur numérique (0 ou 1)
 - A Out : Analogic Out - > Valeur analogique (0-1023)
 
-```blocks
+sur le port série (**USB**).
+
+## @showhint
+
+```blocks @showhint
 basic.forever(function () {
     serial.writeValue("D Out", pins.digitalReadPin(DigitalPin.P0))
     serial.writeValue("A Out", pins.analogReadPin(AnalogPin.P1))
     basic.pause(1000)
 })
 ```
-### Récolte de données
 
-![Récolte de données](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/2-MesuresM5Stack.gif?raw=true)
+### Récolte des données @showdialog
 
-## @showdialog
+**ASTUCE** :
+Utilisez vos doigts pour toucher la partie métalique du capteur pour faire varier la valeur mesurée.
 
-## Rédiger votre rapport d'atelier :
+![Récolte de données](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/2-Mesures.gif?raw=true)
 
-1. Les problèmes que vous avez rencontrés lors de vos mesures ?
-2. Comment vous les expliqué ?
+## Mesure de la température et de l'humidité de l'air @showdialog
 
-## Mesure de la température et de l'humidité de l'air
-
-Capteur - DHT11
-![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive37.png?raw=true)
+![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive37.png?raw=true)
 
 ## Changer la couleur d'une led @showhint
 
 Actuateur - Led RGB
-![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive38.png?raw=true)
 
-```blocks
+![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive38.png?raw=true)
+
+```blocks @showhints
 basic.forever(function () {
     for (let Rouge = 0; Rouge <= 1023; Rouge++) {
         for (let Vert = 0; Vert <= 1023; Vert++) {
@@ -127,16 +135,21 @@ basic.forever(function () {
 })
 ```
 
-**Astuces & conseils**
 
-- Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
-- Vous pouvez sauvegarder votre programme pour chaque étape en copiant le contenu du fichier main.blocks comme le montre l'exemple ci-dessous.
+## @showdialog
+
+## Rédiger votre rapport d'atelier :
+
+1. Expliquez les problèmes que vous avez rencontrés et les solutions que vous avez trouvées.
+2. Synthétiser et expliquer les données récoltées.
+3. Répondez aux questions ci-dessous.
+![Questionnaire](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive39.png?raw=true)
 
 
 ## @showdialog
-___GUIDE DE DÉPANNAGE - (TROUBLESHOOTING)___
 
-- [Définition : Troubleshooting](https://www.oracle.com/fr/security/troubleshooting-depannage-resolution-problemes/#:~:text=que%20le%20troubleshooting%20%3F-,Le%20troubleshooting%20(ou%20d%C3%A9pannage)%20est%20un%20processus%20de%20recherche%20logique,ordinateurs%20et%20des%20syst%C3%A8mes%20logiciels.)
+# GUIDE DE DÉPANNAGE - (TROUBLESHOOTING)
+Ce petit guide est destiné à vous aider à résoudre la majorité de vos problèmes.
 
 ## Étape 1/4 - Vérifier les connexions
 
@@ -147,20 +160,27 @@ Par moment, il est préférable de tout débrancher et tout rebranché en respec
 
 ## Étape 2/4 - Vérifier la connexion Micro:Bit dans le bouclier
 
-Assurez-vous que le Micro:Bit soit inséré correctement (et dans le bon sens) dans le bouclier. (shield)
-Contrôlez que le câble Micro-USB soit correctement branché.
+Assurez-vous que le Micro:Bit soit inséré correctement (et **dans le bon sens**) dans le bouclier. (shield)
+Contrôlez que le **câble Micro-USB** soit correctement branché.
 
 - Si le câble est mal branché, le transfert du programme **ET** la récolte de données ne pourront pas fonctionner, car la liaison entre le Micro:Bit et le PC ne sera pas établie.
 
 ## Étape 3/4 - Vérifier la programmation des ports d'entrées-sorties
 
 Les données sont soient :
-
 1. Récoltées en **entrée** depuis un **capteur**. (**Input**)
 2. Envoyées en **sortie** sur un **actuateur**. (**output**).
 
-> Le Micro:Bit dispose de 3 ports standards (**P0**, **P1**, **P2**) qui sont prévus pour **récolter** ou **envoyer** des données. **Il est nécessaire** d'indiquer pour chaque ports si ils sont utilisés en **entrée** (**capteur**, ex. capteur de température) ou en **sortie** (**actuateur**, ex. led) et si les données sont **analogiques** (compris entre 0-1023) ou **numériques**. (0 ou 1)
+> Le Micro:Bit dispose de 3 ports standards (**P0**, **P1**, **P2**) qui sont prévus pour **récolter** ou **envoyer** des données. 
+**Il est nécessaire** d'indiquer pour chaque ports si ils sont utilisés en **entrée** (**capteur**, ex. capteur de température) ou en **sortie** (**actuateur**, ex. led) 
+
+**ASTUCES**
+- On lit depuis un capteur
+- On écrit vers un actuateur
+
+Il est également important de savcoir si les données sont **analogiques** (compris entre 0-1023) ou **numériques**. (0 ou 1)
 
 ## Étape 4/4 - Vérifier la temporalité
 
-> Lorsque le Micro:Bit envoie ou reçoit des données, il peut le faire de manière beaucoup trop rapide pour le capteur ou l'actuateur, raison pour laquelle il faut insérer une pause ``||basic:pause(temps)||`` dans la boucle qui effectue la mesure.
+> Lorsque le Micro:Bit envoie ou reçoit des données, il peut le faire de manière beaucoup trop rapide pour le capteur ou l'actuateur, 
+raison pour laquelle il faut insérer une pause ``||basic:pause(temps)||`` dans la boucle qui effectue la mesure.
