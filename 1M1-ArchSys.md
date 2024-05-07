@@ -18,21 +18,17 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 
 ## @showdialog
 
-![INFORMATIONS IMPORTANTES](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive34.png?raw=true)
+# Récolter des données du Micro:MicroBit via le port USB
 
-## @showdialog
-
-# Récolter des données via USB
-
-Pour récolter des données sur le PC, le programme du MicroBit doit envoyer 
-chaque seconde, par exemple, la **température** et la **luminosité** 
+Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations. 
+Dans l'exemple suivant, la **température** et la **luminosité** sont envoyées chaque seconde
 sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
 **Remarques**
 
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
 
-## Programmer le Micro:Bit @showhint
+## Programmation du Micro:Bit @showhint
 
 Pour transmettre ces données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série** 
 et la déposer dans la boucle toujours ``||basic:toujours||``, c qui va définir le nom et la valeur mesurée. 
@@ -50,33 +46,35 @@ basic.forever(function () {
 
 ## Téléchargement du programme et visualisation des données
 
-- Il est important de télécharger le programme à chaque **modification**.
+- Il est important de télécharger le programme sur le MicroBit à chaque **modification** de ce dernier.
 
 **Remarque**
-
-- Lors du premier téléchargement, "Makecode" demande de pairer le Micro:Bit si cela n'a jamais été fait auparavant.
-- Lorsque le téléchargement est terminé, un nouveau bouton "Afficher données Appareil" doit apparaître sur la partie gauche de l'écran.
+- Lors du premier téléchargement, "Makecode" demande de d'apairer le Micro:Bit si cela n'a jamais été fait auparavant.
+- Lorsque le téléchargement est terminé, un nouveau bouton "**Afficher données Appareil**" doit apparaître sur la partie gauche de l'écran.
 
 ![Téléchargement-visualisation-sauvegarde](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1-Transfert-Visualisation-Sauvegarde.gif?raw=true)
 
 **Astuces** :
 Touchez le CPU pour faire varier la température, et éclairez avec votre smartphone la matrice de led du Micro:Bit.
 
-**IMPORTANT** : Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
-
-Vous pouvez utiliser une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
+**IMPORTANT** : 
+Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 
 ## @showdialog
 
 ### Interprétation et analyser des données
 
+**Astuces** :
+Vous pouvez utiliser une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
+
+**IMPORTANT** : 
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
 
 ## Mesure de l'humidité de l'air du sol
 
 ### Schéma de câblage
 
-![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
+![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive36.png?raw=true)
 
 ## @showdialog
 
@@ -108,12 +106,12 @@ basic.forever(function () {
 ## Mesure de la température et de l'humidité de l'air
 
 Capteur - DHT11
-![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
+![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive37.png?raw=true)
 
 ## Changer la couleur d'une led @showhint
 
 Actuateur - Led RGB
-![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive31.jpeg?raw=true)
+![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive38.png?raw=true)
 
 ```blocks
 basic.forever(function () {
