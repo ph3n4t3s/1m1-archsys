@@ -16,7 +16,9 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 
 # Récolter des données via USB
 
-Le programme envoie chaque seconde la **température** et la **luminosité** sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
+Pour récolter des données sur le PC, le programme du MicroBit doit envoyer 
+chaque seconde, par exemple, la **température** et la **luminosité** 
+sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
 **Remarques**
 
@@ -24,8 +26,10 @@ Le programme envoie chaque seconde la **température** et la **luminosité** sur
 
 ## Programmer le Micro:Bit @showhint
 
-Pour transmettre les données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série** et la déposer dans la boucle toujours ``||basic:toujours||``. Ceci va définir le nom et la valeur mesurée. Nous trouverons les variables prédéfinies pour la température ``||Entrée:température (° C)||`` et et pour la luminosité ``||Entrée:niveau d'intensité lumineuse||`` dans la catégorie **Entrée**.
-
+Pour transmettre ces données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série** 
+et la déposer dans la boucle toujours ``||basic:toujours||``, c qui va définir le nom et la valeur mesurée. 
+Nous trouverons les variables prédéfinies pour la température ``||Entrée:température (° C)||`` et et pour la luminosité ``||Entrée:niveau d'intensité lumineuse||`` dans la catégorie **Entrée**.
+À la fin de la boucle nous insérons une attente d'une 1 seconde. ``||basic:pause en (ms)||``
 ```blocks
 basic.forever(function () {
     serial.writeValue("temperature", input.temperature())
@@ -36,7 +40,7 @@ basic.forever(function () {
 
 ## @showdialog
 
-## Téléchargement du programme et visualisation des données @showhint
+## Téléchargement du programme et visualisation des données
 
 - Il est important de télécharger le programme à chaque **modification**.
 
@@ -56,15 +60,17 @@ Vous pouvez utiliser une application de traitement de données tel que Excel, Nu
 
 ## @showdialog
 
-### Interprétation et analyser des données @showhint
+### Interprétation et analyser des données
 
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
 
-## Exercice #1 : Mesure de l'humidité du sol @showhint
+## Mesure de l'humidité de l'air du sol
 
 ### Schéma de câblage
 
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive29.jpeg?raw=true)
+
+## @showdialog
 
 ### Programmation du Micro:Bit
 
@@ -80,15 +86,18 @@ basic.forever(function () {
     basic.pause(1000)
 })
 ```
+### Récolte de données
 
 ![Récolte de données](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/2-MesuresM5Stack.gif?raw=true)
 
-Rapportez votre rapport d'atelier :
+## @showdialog
+
+## Rédiger votre rapport d'atelier :
 
 1. Les problèmes que vous avez rencontrés lors de vos mesures ?
 2. Comment vous les expliqué ?
 
-## Mesure de la température et de l'humidité de l'air @showhint
+## Mesure de la température et de l'humidité de l'air
 
 Capteur - DHT11
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/Diapositive30.jpeg?raw=true)
