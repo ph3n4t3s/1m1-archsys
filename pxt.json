@@ -14,9 +14,7 @@
         "main.ts",
         "README.md",
         "tutorial-info-cache.json",
-        "img/index-img.md",
-        "tutoriel-compteur.md",
-        "1M1ArchSys.md"
+        "img/index-img.md"
     ],
     "testFiles": [
         "test.ts"
@@ -28,5 +26,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
