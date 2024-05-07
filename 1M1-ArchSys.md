@@ -14,6 +14,14 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 
 ## @showdialog
 
+![Manipulations et activités de l'atelier #1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive35.png?raw=true)
+
+## @showdialog
+
+![INFORMATIONS IMPORTANTES](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive34.png?raw=true)
+
+## @showdialog
+
 # Récolter des données via USB
 
 Pour récolter des données sur le PC, le programme du MicroBit doit envoyer 
@@ -29,7 +37,7 @@ sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvega
 Pour transmettre ces données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série** 
 et la déposer dans la boucle toujours ``||basic:toujours||``, c qui va définir le nom et la valeur mesurée. 
 Nous trouverons les variables prédéfinies pour la température ``||Entrée:température (° C)||`` et et pour la luminosité ``||Entrée:niveau d'intensité lumineuse||`` dans la catégorie **Entrée**.
-À la fin de la boucle nous insérons une attente d'une 1 seconde. ``||basic:pause en (ms)||``
+À la fin de la boucle nous insérons une attente ``||basic:pause (ms)||`` d'une 1 seconde.
 ```blocks
 basic.forever(function () {
     serial.writeValue("temperature", input.temperature())
@@ -126,6 +134,8 @@ basic.forever(function () {
 - Si vous ne parvenez pas à faire l'exercice, vous pouvez regarder la [vidéo YouTube](https://youtu.be/imzGdgKm4W0?si=EPmg_eWGlHzvkHMw) pour vous aider.
 - Vous pouvez sauvegarder votre programme pour chaque étape en copiant le contenu du fichier main.blocks comme le montre l'exemple ci-dessous.
 
+
+## @showdialog
 ___GUIDE DE DÉPANNAGE - (TROUBLESHOOTING)___
 
 - [Définition : Troubleshooting](https://www.oracle.com/fr/security/troubleshooting-depannage-resolution-problemes/#:~:text=que%20le%20troubleshooting%20%3F-,Le%20troubleshooting%20(ou%20d%C3%A9pannage)%20est%20un%20processus%20de%20recherche%20logique,ordinateurs%20et%20des%20syst%C3%A8mes%20logiciels.)
