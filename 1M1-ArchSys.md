@@ -18,7 +18,7 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 
 ## @showdialog
 
-# Récolter des données du Micro:MicroBit via le port USB
+# Récolter des données du Micro:MicroBit via le port série USB
 
 Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations. 
 Dans l'exemple suivant, la **température** et la **luminosité** sont envoyées chaque seconde
@@ -52,7 +52,7 @@ basic.forever(function () {
 
 ## Téléchargement du programme et visualisation des données
 
-- Il est important de télécharger le programme sur le MicroBit à chaque **modification** de ce dernier.
+- Il est important de télécharger le programme sur le MicroBit à chaque **modification**.
 
 **Remarque**
 - Lors du premier téléchargement, "Makecode" demande de d'apairer le Micro:Bit si cela n'a jamais été fait auparavant.
@@ -64,7 +64,8 @@ basic.forever(function () {
 Touchez le CPU pour faire varier la température, et éclairez avec votre smartphone la matrice de led du Micro:Bit.
 
 **IMPORTANT** : 
-Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
+- Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
+- N'oubliez pas de sauvegarder votre programme à chaque étape.
 
 ## @showdialog
 
@@ -75,28 +76,30 @@ Vous pouvez utiliser une application de traitement de données tel que Excel, Nu
 
 **IMPORTANT** : 
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
+=> Cela évite de perdre du temps lorsqu'on va analyser les données par la suite.
 
 ## Situation 1 
-Dans cet exemple nous allons utliser un capteur pour mesurer l'humidité du sol, 
+Dans l'exemple suivant nous allons utliser un capteur pour mesurer l'humidité du sol, 
 et envoyer la valeur mesurée sur le PC via le port série **USB**.
 
 ### Mesure de l'humidité du sol
-Le shéma de câblage ci-dessous montre la façon dont le capteur est connecté au MicroBit.
+Le shéma de câblage ci-dessous montre la façon dont le capteur est connecté aux ports P0 et P1 du MicroBit.
+
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive36.png?raw=true)
 
 ### Programmation du Micro:Bit
 
-Le programme utilise la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie **Communication Série**,
-pour envoyer chaque seconde la valeur de :
-
+Le programme lit les données du capteur :
 - D Out : Digital Out -> Valeur numérique (0 ou 1)
 - A Out : Analogic Out - > Valeur analogique (0-1023)
 
-sur le port série (**USB**).
+Le programme lit la valeur numérique du capteur à l'aide de la **fonction** ``||Broches:lire la broche numérique P0||`` et
+la valeur analogique à l'aide de la **fonction** ``||Broches:lire la broche analogique P1||``  dans la catégorie **Broches** 
+et l'envoit sur le port série **USB** à l'aide de la **fonction** ``||Communication Série:série écrire valeur||`` dans la catégorie **Communication Série**.
 
 ## @showhint
 
-```blocks @showhint
+```blocks
 basic.forever(function () {
     serial.writeValue("D Out", pins.digitalReadPin(DigitalPin.P0))
     serial.writeValue("A Out", pins.analogReadPin(AnalogPin.P1))
@@ -111,13 +114,24 @@ Utilisez vos doigts pour toucher la partie métalique du capteur pour faire vari
 
 ![Récolte de données](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/2-Mesures.gif?raw=true)
 
-## Mesure de la température et de l'humidité de l'air @showdialog
+## Situation 2 @showdialog
+Dans l'exemple suivant nous allons mesurer la température 
+et l'humidité de l'air pour l'envoyer au PC via le port série **USB**.
+
+### Mesure de la température et de l'humidité de l'air @showdialog
 
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive37.png?raw=true)
 
-## Changer la couleur d'une led @showhint
+## Situation 3 @showdialog
 
-Actuateur - Led RGB
+Réalisez un programme qui change la couleur de la led à chaque fois que l'on appuie sur le bouton A.
+
+### Éclairage avec une Led RGB @showdialog
+
+Utilisez le schéma de câblage pour savoir comment les ports P0, P1 et P2 sont connectés au MicroBit.
+
+**ASTUCE** :
+- Correspond aux couleurs des fils Rouge, Vert et Bleu. (RVB / RGB Red,Green,Blue)
 
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive38.png?raw=true)
 
