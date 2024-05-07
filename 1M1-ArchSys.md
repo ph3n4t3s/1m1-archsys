@@ -46,11 +46,9 @@ basic.forever(function () {
     serial.writeValue("luminosite", input.lightLevel())
     basic.pause(1000)
 })
-```
+``` 
 
-## @showdialog
-
-## Téléchargement du programme et visualisation des données
+## Téléchargement du programme et visualisation des données @showdialog
 
 - Il est important de télécharger le programme sur le MicroBit à chaque **modification**.
 
@@ -67,9 +65,7 @@ Touchez le CPU pour faire varier la température, et éclairez avec votre smartp
 - Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 - N'oubliez pas de sauvegarder votre programme à chaque étape.
 
-## @showdialog
-
-## Interprêtation et analyse des données
+## Interprêtation et analyse des données @showdialog
 
 **Astuces** :
 Vous pouvez utiliser une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
@@ -78,7 +74,7 @@ Vous pouvez utiliser une application de traitement de données tel que Excel, Nu
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
 => Cela évite de perdre du temps lorsqu'on va analyser les données par la suite.
 
-## Situation 1 
+## Situation 1 @showdialog
 Dans l'exemple suivant nous allons utliser un capteur pour mesurer l'humidité du sol, 
 et envoyer la valeur mesurée sur le PC via le port série **USB**.
 
@@ -99,6 +95,9 @@ et l'envoit sur le port série **USB** à l'aide de la **fonction** ``||Communic
 
 ## @showhint
 
+**IMPORTANT** :
+N'oubliez pas de sauvegarder **TOUS** vos programmes dans le répertoire de travail.
+
 ```blocks
 basic.forever(function () {
     serial.writeValue("D Out", pins.digitalReadPin(DigitalPin.P0))
@@ -107,35 +106,81 @@ basic.forever(function () {
 })
 ```
 
-### Récolte des données @showdialog
+## Récolte des données @showdialog
+Récoltez les données et faites une sauvegarde sous format csv dans votre répertoire de travail.
 
 **ASTUCE** :
 Utilisez vos doigts pour toucher la partie métalique du capteur pour faire varier la valeur mesurée.
 
 ![Récolte de données](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/2-Mesures.gif?raw=true)
 
+**QUESTION**
+1. Quelles sont les valeurs minimum et maximum mesurées ?
+2. A quoi correspond la valeur minimum ? (humide ou sec)
+3. À quoi correspond la valeur maximum ? (humide ou sec)
+
+## Autre version du programme @showdialog
+Reprem
+
+```blocks
+function LectureCapteurs () {
+    basic.showIcon(IconNames.SmallDiamond)
+    mesure_D_Out = pins.digitalReadPin(DigitalPin.P0)
+    mesure_A_Out = pins.analogReadPin(AnalogPin.P1)
+}
+function EnvoieDonnees () {
+    basic.showIcon(IconNames.SmallSquare)
+    serial.writeValue("D Out", mesure_D_Out)
+    radio.sendValue("D Out", mesure_D_Out)
+    serial.writeValue("A Out", mesure_A_Out)
+    radio.sendValue("A Out", mesure_A_Out)
+}
+let mesure_A_Out = 0
+let mesure_D_Out = 0
+radio.setGroup(10)
+basic.forever(function () {
+    basic.showIcon(IconNames.Square)
+    LectureCapteurs()
+    EnvoieDonnees()
+})
+```
+
 ## Situation 2 @showdialog
 Dans l'exemple suivant nous allons mesurer la température 
 et l'humidité de l'air pour l'envoyer au PC via le port série **USB**.
+
+Pour varier l'exercice précédent, nous allons créer deux fonctions :
+- LectureCapteurs : Lit la température et l'humidité de l'air.
+- EnvoieDonnees : Envoit ces données au PC via le port série **USB**.
 
 ### Mesure de la température et de l'humidité de l'air @showdialog
 
 ![Branchement du capteur de température et d'humidité (air) - DHT11](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive37.png?raw=true)
 
 ## Situation 3 @showdialog
+Dans l'exemple suivant, nous allons allumer ou éteint une led lorsqu'on appuie sur le bouton A
+et change la couleur lorsqu'on appuie sur le bouton B.
 
-Réalisez un programme qui change la couleur de la led à chaque fois que l'on appuie sur le bouton A.
+Utilisez le schéma de câblage ci-dessous pour savoir comment les ports P0, P1 et P2 sont connectés au MicroBit.
 
-### Éclairage avec une Led RGB @showdialog
-
-Utilisez le schéma de câblage pour savoir comment les ports P0, P1 et P2 sont connectés au MicroBit.
+**IMPORTANT** :
+- Dans cet exemple, chaque valeur de couleurs est numériques (soit 0, soit 1)
+    Exemple : Rouge => P0=1, P1=0, P2=0
 
 **ASTUCE** :
-- Correspond aux couleurs des fils Rouge, Vert et Bleu. (RVB / RGB Red,Green,Blue)
+- Les couleurs des fils Rouge, Vert et Bleu correspondent aux couleurs de la led. (RVB / RGB Red,Green,Blue)
 
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive38.png?raw=true)
 
-```blocks @showhints
+
+Créez un autre programme qui utilise trois boucles imbriquées pour faire varier la couleur de la led.
+
+**ASTUCE** :
+Les valeurs de chaque couleurs sont analogiques. (variants de 0 à 1023)
+
+## @showhint
+
+```blocks 
 basic.forever(function () {
     for (let Rouge = 0; Rouge <= 1023; Rouge++) {
         for (let Vert = 0; Vert <= 1023; Vert++) {
@@ -149,14 +194,14 @@ basic.forever(function () {
 })
 ```
 
-
 ## @showdialog
 
 ## Rédiger votre rapport d'atelier :
+Pour chaque sitation :
+- 1. Expliquez les problèmes que vous avez rencontrés et les solutions que vous avez trouvées.
+- 2. Synthétiser et expliquer les données récoltées.
+- 3. Répondez à **TOUTES** les questions de manière précise (mise en lien avec la théorie).
 
-1. Expliquez les problèmes que vous avez rencontrés et les solutions que vous avez trouvées.
-2. Synthétiser et expliquer les données récoltées.
-3. Répondez aux questions ci-dessous.
 ![Questionnaire](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive39.png?raw=true)
 
 
@@ -192,9 +237,9 @@ Les données sont soient :
 - On lit depuis un capteur
 - On écrit vers un actuateur
 
-Il est également important de savcoir si les données sont **analogiques** (compris entre 0-1023) ou **numériques**. (0 ou 1)
+Il est également important de savcoir si les données sont **analogiques** (compris entre 0-1023) ou **numériques**. (Soit 0 ou soit 1)
 
 ## Étape 4/4 - Vérifier la temporalité
 
 > Lorsque le Micro:Bit envoie ou reçoit des données, il peut le faire de manière beaucoup trop rapide pour le capteur ou l'actuateur, 
-raison pour laquelle il faut insérer une pause ``||basic:pause(temps)||`` dans la boucle qui effectue la mesure.
+raison pour laquelle il faut insérer une pause ``||basic:pause (ms)||`` dans la boucle qui effectue la mesure.
