@@ -14,7 +14,8 @@
         "main.ts",
         "README.md",
         "tutorial-info-cache.json",
-        "img/index-img.md"
+        "img/index-img.md",
+        "1M1-ArchSys.md"
     ],
     "testFiles": [
         "test.ts"
