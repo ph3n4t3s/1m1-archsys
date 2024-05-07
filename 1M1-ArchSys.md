@@ -47,7 +47,7 @@ basic.forever(function () {
 })
 ``` 
 
-## Téléchargement du programme et visualisation des données @showdialog
+### Téléchargement du programme et visualisation des données
 
 - Il est important de télécharger le programme sur le MicroBit à chaque **modification**.
 
