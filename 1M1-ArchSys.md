@@ -8,13 +8,13 @@
 ![logo CC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/cc.png?raw=true)
 Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.
 
+## @showdialog
+
 ![INFORMATIONS IMPORTANTES](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive34.png?raw=true)
 
 ![Manipulations et activités de l'atelier #1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive35.png?raw=true)
 
-## @showdialog
-
-# Récolter des données du Micro:MicroBit via le port série USB
+## Récolter des données du Micro:MicroBit via le port série USB @fullscreen
 
 Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations sur le port série **USB**.
 
@@ -27,7 +27,7 @@ sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvega
   et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
 - Cliquer sur l'ampoule bleue pour voir le programme.
 
-## Programmation du Micro:Bit
+## Programmation du Micro:Bit @fullscreen
 
 Pour transmettre les données récoltées via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série**
 et la déposer dans la boucle toujours ``||basic:toujours||``, ce qui va définir le nom et la valeur mesurée.
@@ -47,7 +47,7 @@ basic.forever(function () {
 })
 ```
 
-## Téléchargement du programme et visualisation des données
+## Téléchargement du programme et visualisation des données @fullscreen
 
 ⚠️
 
@@ -68,7 +68,7 @@ Touchez le CPU pour faire varier la température, et éclairez avec votre smartp
 - Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 - N'oubliez pas de sauvegarder votre programme à chaque étape.
 
-## Interprêtation et analyse des données
+## Interprêtation et analyse des données @fullscreen
 
 💡
 Vous pouvez utiliser une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
@@ -77,7 +77,7 @@ Vous pouvez utiliser une application de traitement de données tel que Excel, Nu
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
 => Cela évite de perdre du temps lorsqu'on va analyser les données par la suite.
 
-## Situation 1 @showhint
+## Situation 1 @fullscreen
 
 Dans l'exemple suivant nous allons utliser un capteur pour mesurer l'humidité du sol,
 et envoyer la valeur mesurée sur le PC via le port série **USB**.
@@ -102,6 +102,8 @@ et l'envoit sur le port série **USB** à l'aide de la **fonction** ``||Communic
 ⚠️
 N'oubliez pas de sauvegarder **TOUS** vos programmes dans le répertoire de travail.
 
+## @showhint
+
 ```blocks
 basic.forever(function () {
     serial.writeValue("D Out", pins.digitalReadPin(DigitalPin.P0))
@@ -110,7 +112,7 @@ basic.forever(function () {
 })
 ```
 
-## Utilisons les fonctions @showhint
+## Utilisons les fonctions @fullscreen
 
 Reprenons notre programme pour créer deux **fonctions** : ``||Fonctions:Créer une fonction...||`` dans la catégorie **Avancé** / **Fonctions**.
 
@@ -128,7 +130,7 @@ function EnvoieDonnees () {
 }
 ```
 
-Créez le contenu des deux fonctions :
+### Créez le contenu des deux fonctions
 
 **LectureCapteurs**
 qui devra aller lire une valeur :
@@ -139,12 +141,15 @@ qui devra aller lire une valeur :
 et **EnvoieDonnees**
 qui devra envoyer ces données via le port série **USB**
 
+💡
 Les blocks à utilisés pour lire sont :
-``||Broches:lire broche analogique||``
-``||Broches:lire broche numérique||``
+- ``||Broches:lire broche analogique||``
+- ``||Broches:lire broche numérique||``
 
 et pour écrire :
-``||Communication Série:série écrire valeur||``
+- ``||Communication Série:série écrire valeur||``
+
+## @showhint
 
 ```blocks
 function LectureCapteurs () {
@@ -169,25 +174,25 @@ basic.forever(function () {
 })
 ```
 
-### Récolte et analyse des données
+### Récolte et analyse des données @fullscreen
 Récoltez les données et n'oubliez pas de faitre une sauvegarde de **TOUTES** vos données sous format csv dans votre répertoire de travail.
 
 💡
-Utilisez vos doigts pour toucher la partie métalique du capteur pour faire varier la valeur mesurée.
+- Utilisez vos doigts pour toucher la partie métalique du capteur pour faire varier la valeur mesurée.
 
 ![Récolte de données](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/2-Mesures.gif?raw=true)
 
-### QUESTION / ANALYSE
+## QUESTIONNEMENT & ANALYSE
 
 Cette expérimentation est destinée à :
 
-1. Savoir déterminer le minimum et le maximum de valeurs attendues.
+1. Savoir déterminer le minimum et le maximum des valeurs attendues du capteur (exemple niveau d'eau, le réservoire d'eau est-il vide ou plein ?).
 2. Comprendre comment elles évoluent.
-3. Quelles sont les valeurs minimum et maximum mesurées ?
-4. A quoi correspond la valeur minimum ? (humide ou sec)
-5. À quoi correspond la valeur maximum ? (humide ou sec)
+3. Quelles sont les valeurs minimum et maximum mesurées ? 
+4. A quoi correspond la valeur minimum ? 
+5. À quoi correspond la valeur maximum ? 
 
-## Situation 2
+## Situation 2 @fullscreen
 
 Dans l'exemple suivant nous allons mesurer la température
 et l'humidité de l'air pour l'envoyer au PC via le port série **USB**.
@@ -246,7 +251,7 @@ Récoltez les données et n'oubliez pas de faitre une sauvegarde de **TOUTES** v
 💡
 Placer le capteur dans vos mains ou souffler sur le capteur pour faire varier les valeurs mesurées.
 
-## Situation 3
+## Situation 3 @fullscreen
 
 Dans l'exemple suivant, nous allons allumer ou éteindre une led lorsqu'on appuie sur le bouton A,
 et changer sa couleur lorsqu'on appuie sur le bouton B.
@@ -264,7 +269,7 @@ Utilisez le schéma de câblage ci-dessous pour savoir comment la led est connec
 - Dans cet exemple, chaque valeur de couleurs est numérique (soit 0, soit 1)
   Exemple : pour allumer la led en rouge => P0=1, P1=0, P2=0
 
-### Autre version du programme
+### Autre version du programme @fullscreen
 
 Complétez le programme suivant qui utilise trois boucles imbriquées pour faire varier la couleur de la led.
 
@@ -302,7 +307,7 @@ basic.forever(function () {
 })
 ```
 
-## Rédiger votre rapport d'atelier
+## Rédiger votre rapport d'atelier @fullscreen
 
 Pour chaque sitation :
 
