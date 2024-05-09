@@ -25,14 +25,12 @@ sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvega
 
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le **Makecode**
   et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
+- Cliquer sur l'ampoule bleue pour voir le programme.
 
 ## Programmation du Micro:Bit
 
 Pour transmettre les données récoltées via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série**
 et la déposer dans la boucle toujours ``||basic:toujours||``, ce qui va définir le nom et la valeur mesurée.
-
-
-⚠️🚧💡ℹ️⚠️
 
 ℹ️
 
@@ -50,6 +48,8 @@ basic.forever(function () {
 ```
 
 ## Téléchargement du programme et visualisation des données
+
+⚠️
 
 - Il est important de télécharger le programme sur le MicroBit à chaque **modification**.
 
