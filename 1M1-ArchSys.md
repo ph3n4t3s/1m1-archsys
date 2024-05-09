@@ -8,16 +8,12 @@
 ![logo CC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/cc.png?raw=true)
 Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.
 
-## @showdialog
-
 ![INFORMATIONS IMPORTANTES](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive34.png?raw=true)
-
-
 
 ![Manipulations et activités de l'atelier #1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive35.png?raw=true)
 
 
-### Récolter des données du Micro:MicroBit via le port série USB
+## Récolter des données du Micro:MicroBit via le port série USB
 
 Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations. 
 Dans l'exemple suivant, la **température** et la **luminosité** sont envoyées chaque seconde
@@ -27,9 +23,9 @@ sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvega
 
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
 
-### Programmation du Micro:Bit
+## Programmation du Micro:Bit
 
-Pour transmettre ces données via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série** 
+Pour transmettre les données récoltées via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série** 
 et la déposer dans la boucle toujours ``||basic:toujours||``, ce qui va définir le nom et la valeur mesurée. 
 
 **ASTUCE**
@@ -73,7 +69,7 @@ Vous pouvez utiliser une application de traitement de données tel que Excel, Nu
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
 => Cela évite de perdre du temps lorsqu'on va analyser les données par la suite.
 
-## Situation 1 @showdialog
+## Situation 1
 Dans l'exemple suivant nous allons utliser un capteur pour mesurer l'humidité du sol, 
 et envoyer la valeur mesurée sur le PC via le port série **USB**.
 
@@ -104,7 +100,8 @@ basic.forever(function () {
     basic.pause(1000)
 })
 ```
-## Autre version du programme @showdialog
+
+## Utilisons les fonctions 
 Reprenons notre programme pour créer deux **fonctions** : ``||Fonctions:Créer une fonction...||`` dans la catégorie **Avancé** / **Fonctions**.
 
 LectureCapteurs : Qui va lire et stocker les valeurs mesurées dans des variables.
@@ -120,6 +117,22 @@ EnvoieDonnees : Qui va envoyer le contenu de ces 2 variables sur le PC via le po
 function EnvoieDonnees () {
 }
 ```
+Créez le contenu de deux fonctions :
+
+**LectureCapteurs** 
+qui devra aller lire une valeur : 
+- numérique (0 ou 1) sur le port P0
+- analogique (de 0 à 1023) sur le port P1
+
+et **EnvoieDonnees** 
+qui devra envoyer ces données via le port série **USB**
+
+Les blocks à utilisés pour lire sont :
+``||Broches:lire broche analogique||``
+``||Broches:lire broche analogique||``
+
+et pour écrire :
+``||Communication Série:série écrire valeur||``
 
 ## @showhint
 
@@ -154,12 +167,16 @@ Utilisez vos doigts pour toucher la partie métalique du capteur pour faire vari
 
 ![Récolte de données](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/2-Mesures.gif?raw=true)
 
-**QUESTION / ANALYSE**
+### QUESTION / ANALYSE
+Cette expérimentation est destinée à :
+1. Savoir déterminer le minimum et le maximum de valeurs attendues.
+2. Comprendre comment elles évoluent.
+
 1. Quelles sont les valeurs minimum et maximum mesurées ?
 2. A quoi correspond la valeur minimum ? (humide ou sec)
 3. À quoi correspond la valeur maximum ? (humide ou sec)
 
-## Situation 2 @showdialog
+## Situation 2
 Dans l'exemple suivant nous allons mesurer la température 
 et l'humidité de l'air pour l'envoyer au PC via le port série **USB**.
 
@@ -208,15 +225,14 @@ basic.forever(function () {
     EnvoieDonnees()
 })
 
-## @showhint
 
-## Récolte et analyse des données
+### Récolte et analyse des données
 Récoltez les données et n'oubliez pas de faitre une sauvegarde de **TOUTES** vos données sous format csv dans votre répertoire de travail.
 
 **ASTUCE** :
 Placer le capteur dans vos mains ou souffler sur le capteur pour faire varier les valeurs mesurées.
 
-## Situation 3 @showdialog
+## Situation 3
 Dans l'exemple suivant, nous allons allumer ou éteindre une led lorsqu'on appuie sur le bouton A,
 et changer sa couleur lorsqu'on appuie sur le bouton B.
 
@@ -250,7 +266,7 @@ basic.forever(function () {
 })
 ```
 
-## Rédiger votre rapport d'atelier @showdialog
+## Rédiger votre rapport d'atelier
 Pour chaque sitation :
 - 1. Expliquez les problèmes que vous avez rencontrés et les solutions que vous avez trouvées.
 - 2. Synthétiser et expliquer les données récoltées.
