@@ -46,7 +46,7 @@ basic.forever(function () {
 })
 ``` 
 
-### Téléchargement du programme et visualisation des données
+## Téléchargement du programme et visualisation des données
 
 - Il est important de télécharger le programme sur le MicroBit à chaque **modification**.
 
@@ -63,7 +63,7 @@ Touchez le CPU pour faire varier la température, et éclairez avec votre smartp
 - Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 - N'oubliez pas de sauvegarder votre programme à chaque étape.
 
-### Interprêtation et analyse des données
+## Interprêtation et analyse des données
 
 **Astuces** :
 Vous pouvez utiliser une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
@@ -72,7 +72,7 @@ Vous pouvez utiliser une application de traitement de données tel que Excel, Nu
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
 => Cela évite de perdre du temps lorsqu'on va analyser les données par la suite.
 
-## Situation 1
+## Situation 1 @showhint
 Dans l'exemple suivant nous allons utliser un capteur pour mesurer l'humidité du sol, 
 et envoyer la valeur mesurée sur le PC via le port série **USB**.
 
@@ -81,7 +81,7 @@ Le shéma de câblage ci-dessous montre la façon dont le capteur est connecté 
 
 ![Branchement du capteur d'humidité (sol) - M5STACK EARTH](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive36.png?raw=true)
 
-### Programmation du Micro:Bit
+### Programmation du Micro:Bit 
 
 Le programme lit les données du capteur **M5STACK-EARTH** :
 - **D Out** : Digital Out -> Valeur numérique (0 ou 1) -> **P0**
@@ -94,8 +94,6 @@ et l'envoit sur le port série **USB** à l'aide de la **fonction** ``||Communic
 **IMPORTANT** :
 N'oubliez pas de sauvegarder **TOUS** vos programmes dans le répertoire de travail.
 
-## @showhint
-
 ```blocks
 basic.forever(function () {
     serial.writeValue("D Out", pins.digitalReadPin(DigitalPin.P0))
@@ -104,7 +102,7 @@ basic.forever(function () {
 })
 ```
 
-## Utilisons les fonctions 
+## Utilisons les fonctions @showhint
 Reprenons notre programme pour créer deux **fonctions** : ``||Fonctions:Créer une fonction...||`` dans la catégorie **Avancé** / **Fonctions**.
 
 LectureCapteurs : Qui va lire et stocker les valeurs mesurées dans des variables.
@@ -120,7 +118,8 @@ EnvoieDonnees : Qui va envoyer le contenu de ces 2 variables sur le PC via le po
 function EnvoieDonnees () {
 }
 ```
-Créez le contenu de deux fonctions :
+
+Créez le contenu des deux fonctions :
 
 **LectureCapteurs** 
 qui devra aller lire une valeur : 
@@ -136,8 +135,6 @@ Les blocks à utilisés pour lire sont :
 
 et pour écrire :
 ``||Communication Série:série écrire valeur||``
-
-## @showhint
 
 ```blocks
 function LectureCapteurs () {
@@ -178,6 +175,7 @@ Cette expérimentation est destinée à :
 1. Quelles sont les valeurs minimum et maximum mesurées ?
 2. A quoi correspond la valeur minimum ? (humide ou sec)
 3. À quoi correspond la valeur maximum ? (humide ou sec)
+
 
 ## Situation 2
 Dans l'exemple suivant nous allons mesurer la température 
