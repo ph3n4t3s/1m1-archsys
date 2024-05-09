@@ -131,7 +131,7 @@ qui devra envoyer ces données via le port série **USB**
 
 Les blocks à utilisés pour lire sont :
 ``||Broches:lire broche analogique||``
-``||Broches:lire broche analogique||``
+``||Broches:lire broche numérique||``
 
 et pour écrire :
 ``||Communication Série:série écrire valeur||``
@@ -226,7 +226,7 @@ basic.forever(function () {
     LectureCapteurs()
     EnvoieDonnees()
 })
-
+```
 
 ### Récolte et analyse des données
 Récoltez les données et n'oubliez pas de faitre une sauvegarde de **TOUTES** vos données sous format csv dans votre répertoire de travail.
@@ -250,7 +250,24 @@ Utilisez le schéma de câblage ci-dessous pour savoir comment la led est connec
     Exemple : pour allumer la led en rouge => P0=1, P1=0, P2=0
 
 ### Autre version du programme
-Créez un autre programme qui utilise trois boucles imbriquées pour faire varier la couleur de la led.
+Complétez le programme suivant qui utilise trois boucles imbriquées pour faire varier la couleur de la led.
+
+```blocks 
+basic.forever(function () {
+    for (let Rouge = 0; Rouge <= 1023; Rouge++) {
+        for (let Vert = 0; Vert <= 1023; Vert++) {
+            for (let Bleu = 0; Bleu <= 1023; Bleu++) {
+
+            }
+        }
+    }
+})
+```
+
+**ASTUCE**
+- Utilisez les ports P0,P1 et P3 en analogiqueen utlisant le block ``||Broches:écrire broche analogique||``.
+De cette manière vous ferez varier l'intensité lumineuse de 0 à 1023 (0=éteint et 1023=intensité maximale), 
+au lieu de éteint/allumé (0 ou 1)
 
 ## @showhint
 
@@ -280,14 +297,14 @@ Pour chaque sitation :
 # GUIDE DE DÉPANNAGE - (TROUBLESHOOTING) @showdialog
 Ce petit guide est destiné à vous aider à résoudre la majorité de vos problèmes.
 
-### Étape 1/4 - Vérifier les connexions
+## Étape 1/4 - Vérifier les connexions
 
 Vérifiez consciencieusement les connexions selon le schéma de câblage.
 
 **ASTUCE** :
 Par moment, il est préférable de tout débrancher et tout rebranché en respectant précisément le **schéma de câblage.**
 
-### Étape 2/4 - Vérifier la connexion Micro:Bit dans le bouclier
+## Étape 2/4 - Vérifier la connexion Micro:Bit dans le bouclier
 
 Assurez-vous que le Micro:Bit soit inséré correctement (et **dans le bon sens**) dans le bouclier. (shield)
 Contrôlez que le **câble Micro-USB** soit correctement branché.
@@ -295,7 +312,7 @@ Contrôlez que le **câble Micro-USB** soit correctement branché.
 **IMPORTANT** :
 - Si le câble est mal branché, le transfert du programme **ET** la récolte de données ne pourront pas fonctionner, car la liaison entre le Micro:Bit et le PC ne sera pas établie.
 
-### Étape 3/4 - Vérifier la programmation des ports d'entrées-sorties
+## Étape 3/4 - Vérifier la programmation des ports d'entrées-sorties
 
 Les données sont soient :
 1. Récoltées en **entrée** depuis un **capteur**. (**Input**)
@@ -312,7 +329,7 @@ Il est également important de savoir si les données sont :
 - **analogiques** (compris entre 0-1023) ou
 - **numériques** (Soit 0 ou soit 1)
 
-### Étape 4/4 - Vérifier la temporalité
+## Étape 4/4 - Vérifier la temporalité
 
 > Lorsque le Micro:Bit envoie ou reçoit des données, il peut le faire de manière beaucoup trop rapide pour le capteur ou l'actuateur, 
 raison pour laquelle il faut insérer une pause ``||basic:pause (ms)||`` dans la boucle qui effectue les mesures.
