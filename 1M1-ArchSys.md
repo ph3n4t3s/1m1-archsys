@@ -14,15 +14,17 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 
 ## @showdialog
 
-## Récolter des données du Micro:MicroBit via le port série USB
+# Récolter des données du Micro:MicroBit via le port série USB
 
-Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations. 
+Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations sur le port série **USB**. 
+
 Dans l'exemple suivant, la **température** et la **luminosité** sont envoyées chaque seconde
 sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
 **Remarques**
 
-- La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le Micro:Bit et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
+- La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le **Makecode** 
+et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
 
 ## Programmation du Micro:Bit
 
@@ -181,8 +183,8 @@ Cette expérimentation est destinée à :
 Dans l'exemple suivant nous allons mesurer la température 
 et l'humidité de l'air pour l'envoyer au PC via le port série **USB**.
 
-Nous reprendrons l'utilisation des 2 fonctions l'exercice précédent, nous allons créer deux fonctions :
-- LectureCapteurs : Lit et stocke la température et l'humidité de l'air dans 2 variables.
+Nous reprendrons l'utilisation des 2 fonctions l'exercice précédent :
+- LectureCapteurs : Lit et stocke la température et l'humidité de l'air dans 2 variables (temperature et humidite).
 - EnvoieDonnees : Envoit le contenu de ces 2 variables au PC via le port série **USB**.
 
 ### Mesure de la température et de l'humidité de l'air
@@ -191,6 +193,7 @@ Nous reprendrons l'utilisation des 2 fonctions l'exercice précédent, nous allo
 
 ### Programmation du MicroBit
 Pour lire le capteur **DHT11**, il est nécessaire d'utiliser une extension.
+
 Cette dernière à déjà été installé et se trouve dans la catégorie **DHT11/DHT22**.
 Pour lire la température de l'air, il faut utiliser la **fonction** ``||DHT11/DHT22:Query DHT11||``
 et pour lire l'humidité de l'air, il faut utiliser la **fonction**
