@@ -25,7 +25,6 @@ sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvega
 
 - La **température** et la **luminosité** proviennent de deux **variables prédéfinies** dans le **Makecode**
   et contiennent les **valeurs mesurées** par les **capteurs internes** correspondants du Micro:Bit (Sonde de température du CPU, matrice de leds)
-- Cliquer sur l'ampoule bleue pour voir le programme.
 
 ## Programmation du Micro:Bit @fullscreen
 
