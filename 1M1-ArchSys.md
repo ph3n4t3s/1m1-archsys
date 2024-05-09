@@ -19,7 +19,7 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations sur le port série **USB**.
 
 Dans l'exemple suivant, la **température** et la **luminosité** sont envoyées chaque seconde
-sur le port série (**USB**) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
+sur le port série (==USB==) afin de pouvoir les **visualiser** et les **sauvegarder** sur le PC.
 
 💡
 
