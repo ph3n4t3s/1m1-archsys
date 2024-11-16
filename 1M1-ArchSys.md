@@ -72,7 +72,7 @@ Touchez le CPU pour faire varier la température, et éclairez avec votre smartp
 ## Interprêtation et analyse des données @fullscreen
 
 💡
-Vous pouvez utiliser une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
+Utilisez une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
 
 ⚠️
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
@@ -113,11 +113,12 @@ basic.forever(function () {
 })
 ```
 
-## Utilisons les fonctions @fullscreen
+## Utilisation des fonctions @fullscreen
 
 Reprenons notre programme pour créer deux **fonctions** : ``||Fonctions:Créer une fonction...||`` dans la catégorie **Avancé** / **Fonctions**.
 
-LectureCapteurs : Qui va lire et stocker les valeurs mesurées dans des variables.
+LectureCapteurs : Qui va lire et stocker les valeurs mesurées.
+
 
 ```blocks
 function LectureCapteurs () {
@@ -175,6 +176,10 @@ basic.forever(function () {
 })
 ```
 
+💡
+- L'utilisation des blocks ``||basic:montrer icône||`` pour changer l'afficage des leds suffit à ajouter des temps suffisants entre chaque mesure, donc il n'y plus besoin de pause.
+
+
 ### Récolte et analyse des données @fullscreen
 Récoltez les données et n'oubliez pas de faitre une sauvegarde de **TOUTES** vos données sous format csv dans votre répertoire de travail.
 
@@ -196,12 +201,12 @@ Cette expérimentation est destinée à :
 ## Situation 2 @fullscreen
 
 Dans l'exemple suivant nous allons mesurer la température
-et l'humidité de l'air pour l'envoyer au PC via le port série **USB**.
+et l'humidité de l'air via le capteur (==DHT11==) pour l'envoyer au PC via le port série **USB**.
 
-Nous reprendrons l'utilisation des 2 fonctions l'exercice précédent :
+Nous reprennons le principe des 2 fonctions l'exercice précédent :
 
-- LectureCapteurs : Lit et stocke la température et l'humidité de l'air dans 2 variables (temperature et humidite).
-- EnvoieDonnees : Envoit le contenu de ces 2 variables au PC via le port série **USB**.
+- LectureCapteurs : Lit et stocke la température et l'humidité de l'air dans 2 variables (``||variable:mesure_temp||`` et mesure_hum).
+- EnvoieDonnees : Envoit le contenu de ces 2 variables avec les bon label au PC via le port série **USB**.
 
 ### Mesure de la température et de l'humidité de l'air
 
@@ -211,8 +216,27 @@ Nous reprendrons l'utilisation des 2 fonctions l'exercice précédent :
 Pour lire le capteur **DHT11**, il est nécessaire d'utiliser une extension.
 
 Cette dernière à déjà été installé et se trouve dans la catégorie **DHT11/DHT22**.
-Pour lire la température de l'air, il faut utiliser la **fonction** ``||DHT11/DHT22:Query DHT11||``
-et pour lire l'humidité de l'air, il faut utiliser la **fonction**
+Pour lire la température et l'humidité de l'air, il faut utiliser la **fonction** ``||DHT11/DHT22:Query DHT11||``.
+
+Poser ce block dans la fonction LectureCapteurs, et configurez comme le montre l'exemple ci-dessous :
+
+```blocks
+function LectureCapteurs () {
+    basic.showIcon(IconNames.SmallDiamond)
+    dht11_dht22.queryData(
+    DHTtype.DHT11,
+    DigitalPin.P0,
+    true,
+    false,
+    true
+    )
+}
+```
+
+
+À la suite de ce block, créez deux variables ``||Variables:Créer une variable...||`` :
+- ``||Variables:mesure_temp||``
+- ``||Variables:mesure_hum||``
 
 ## @showhint
 
@@ -246,7 +270,7 @@ basic.forever(function () {
 })
 ```
 
-### Récolte et analyse des données
+### Récolte et analyse des données @fullscreen
 Récoltez les données et n'oubliez pas de faitre une sauvegarde de **TOUTES** vos données sous format csv dans votre répertoire de travail.
 
 💡
@@ -262,13 +286,30 @@ Utilisez le schéma de câblage ci-dessous pour savoir comment la led est connec
 ![Branchement de l'actuateur - Led RGB](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive38.png?raw=true)
 
 💡
-
 - La couleur des fils (Rouge, Vert et Bleu) correspond aux couleurs de la led. (RVB / RGB Red,Green,Blue)
+- Pour traiter les événements (appuie sur boutons) utilisez les blocks suivants :
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+	
+})
+input.onButtonPressed(Button.B, function () {
+	
+})
+```
 
 ⚠️
 
-- Dans cet exemple, chaque valeur de couleurs est numérique (soit 0, soit 1)
-  Exemple : pour allumer la led en rouge => P0=1, P1=0, P2=0
+- Dans cet exemple, chaque valeur de couleurs est représentée de manière numérique (soit 0, soit 1)
+  Exemples : 
+  - Pour allumer la led en rouge, il faut que P0 soit à 1, P1 à 0, P2 à 0.
+  - Pour allumer la led en verte, il faut que P0 soit à 0, P1 à 1, P2 à 0. 
+  - Pour allumer la led en bleue, il faut que P0 soit à 0, P1 à 0, P2 à 1.
+
+Créez une variable ``||Variables:Créer une variable...||`` ``||Variables:couleur_led||``
+
+## showhint
+
 
 ### Autre version du programme @fullscreen
 
