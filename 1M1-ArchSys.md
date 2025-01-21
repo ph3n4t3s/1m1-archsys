@@ -8,11 +8,12 @@
 ![logo CC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/cc.png?raw=true)
 Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.
 
-## @showdialog
-
 ![INFORMATIONS IMPORTANTES](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive34.png?raw=true)
 
 ![Manipulations et activités de l'atelier #1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive35.png?raw=true)
+
+![Automatisation](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Automatisation.png?raw=true)
+
 
 ## Récolter des données du Micro:MicroBit via le port série USB @fullscreen
 
