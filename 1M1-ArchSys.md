@@ -15,7 +15,7 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 ![Automatisation](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Automatisation.png?raw=true)
 
 
-## Récolter des données du Micro:MicroBit via le port série USB @fullscreen
+## Récolter des données du Micro:MicroBit via le port série USB
 
 Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations sur le port série **USB**.
 
@@ -29,7 +29,7 @@ sur le port série (==USB==) afin de pouvoir les **visualiser** et les **sauvega
 
 ![Ampoule bleue](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/ampoule_bleue.png?raw=true)
 
-## Programmation du Micro:Bit @fullscreen
+## Programmation du Micro:Bit
 
 Pour transmettre les données récoltées via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série**
 et la déposer dans la boucle toujours ``||basic:toujours||``, ce qui va définir le nom et la valeur mesurée.
@@ -49,7 +49,7 @@ basic.forever(function () {
 })
 ```
 
-## Téléchargement du programme et visualisation des données @fullscreen
+## Téléchargement du programme et visualisation des données 
 
 ⚠️
 
@@ -114,7 +114,7 @@ basic.forever(function () {
 })
 ```
 
-## Utilisation des fonctions @fullscreen
+## Utilisation des fonctions 
 
 Reprenons notre programme pour créer deux **fonctions** : ``||Fonctions:Créer une fonction...||`` dans la catégorie **Avancé** / **Fonctions**.
 
@@ -199,7 +199,7 @@ Cette expérimentation est destinée à :
 4. A quoi correspond la valeur minimum ? 
 5. À quoi correspond la valeur maximum ? 
 
-## Situation 2 @fullscreen
+## Situation 2
 
 Dans l'exemple suivant nous allons mesurer la température
 et l'humidité de l'air via le capteur (==DHT11==) pour l'envoyer au PC via le port série **USB**.
@@ -239,8 +239,6 @@ function LectureCapteurs () {
 - ``||Variables:mesure_temp||``
 - ``||Variables:mesure_hum||``
 
-## @showhint
-
 ```blocks
 function LectureCapteurs () {
     basic.showIcon(IconNames.SmallDiamond)
@@ -271,13 +269,13 @@ basic.forever(function () {
 })
 ```
 
-### Récolte et analyse des données @fullscreen
+### Récolte et analyse des données
 Récoltez les données et n'oubliez pas de faitre une sauvegarde de **TOUTES** vos données sous format csv dans votre répertoire de travail.
 
 💡
 Placer le capteur dans vos mains ou souffler sur le capteur pour faire varier les valeurs mesurées.
 
-## Situation 3 @fullscreen
+## Situation 3
 
 Dans l'exemple suivant, nous allons allumer ou éteindre une led lorsqu'on appuie sur le bouton A,
 et changer sa couleur lorsqu'on appuie sur le bouton B.
@@ -312,7 +310,7 @@ Créez une variable ``||Variables:Créer une variable...||`` ``||Variables:coule
 ## showhint
 
 
-### Autre version du programme @fullscreen
+### Autre version du programme
 
 Complétez le programme suivant qui utilise trois boucles imbriquées pour faire varier la couleur de la led.
 
@@ -334,7 +332,6 @@ basic.forever(function () {
   De cette manière vous ferez varier l'intensité lumineuse de 0 à 1023 (0=éteint et 1023=intensité maximale),
   au lieu de éteint/allumé (0 ou 1)
 
-## @showhint
 
 ```blocks
 basic.forever(function () {
@@ -350,7 +347,7 @@ basic.forever(function () {
 })
 ```
 
-## Rédiger votre rapport d'atelier @fullscreen
+## Rédiger votre rapport d'atelier
 
 Pour chaque sitation :
 
