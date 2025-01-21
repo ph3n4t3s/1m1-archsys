@@ -1,4 +1,4 @@
-# 1M - Projet Micro-serre d'intérieure automatisée - Architecture des systèmes informatiques
+# 1M - Projet Micro-serre intelligente - Architecture des systèmes informatiques
 
 ## @showdialog
 
@@ -14,10 +14,14 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 
 ![Manipulations et activités de l'atelier #1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive35.png?raw=true)
 
+## @showdialog
+
 ![Automatisation](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Automatisation.png?raw=true)
 
+---
+## @showdialog
 
-## Récolter des données du Micro:MicroBit via le port série USB @showdialog
+## Récolter des données du Micro:MicroBit via le port série USB
 
 Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations sur le port série **USB**.
 
@@ -31,7 +35,9 @@ sur le port série (==USB==) afin de pouvoir les **visualiser** et les **sauvega
 
 ![Ampoule bleue](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/ampoule_bleue.png?raw=true)
 
-## Programmation du Micro:Bit @showdialog
+## @showdialog
+
+## Programmation du Micro:Bit
 
 Pour transmettre les données récoltées via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série**
 et la déposer dans la boucle toujours ``||basic:toujours||``, ce qui va définir le nom et la valeur mesurée.
@@ -50,8 +56,10 @@ basic.forever(function () {
     basic.pause(1000)
 })
 ```
+v
+## @showdialog
 
-## Téléchargement du programme et visualisation des données @showdialog
+## Téléchargement du programme et visualisation des données
 
 ⚠️
 
