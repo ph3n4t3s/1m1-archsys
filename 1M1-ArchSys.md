@@ -8,6 +8,8 @@
 ![logo CC](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/cc.png?raw=true)
 Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International.
 
+## @showdialog
+
 ![INFORMATIONS IMPORTANTES](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive34.png?raw=true)
 
 ![Manipulations et activités de l'atelier #1](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Diapositive35.png?raw=true)
@@ -15,7 +17,7 @@ Ce tutoriel est mis à disposition, sauf exception, selon les termes de la Licen
 ![Automatisation](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1M1-ArchSys/Automatisation.png?raw=true)
 
 
-## Récolter des données du Micro:MicroBit via le port série USB
+## Récolter des données du Micro:MicroBit via le port série USB @showdialog
 
 Pour récolter des données sur le PC, il faut que le programme du MicroBit envoit des informations sur le port série **USB**.
 
@@ -29,7 +31,7 @@ sur le port série (==USB==) afin de pouvoir les **visualiser** et les **sauvega
 
 ![Ampoule bleue](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/ampoule_bleue.png?raw=true)
 
-## Programmation du Micro:Bit
+## Programmation du Micro:Bit @showdialog
 
 Pour transmettre les données récoltées via le port série **USB** , il faut utiliser la **fonction** ``||Communication Série:série écrire valeur||`` qui se trouve dans la catégorie **Communication Série**
 et la déposer dans la boucle toujours ``||basic:toujours||``, ce qui va définir le nom et la valeur mesurée.
@@ -49,7 +51,7 @@ basic.forever(function () {
 })
 ```
 
-## Téléchargement du programme et visualisation des données 
+## Téléchargement du programme et visualisation des données @showdialog
 
 ⚠️
 
@@ -70,7 +72,7 @@ Touchez le CPU pour faire varier la température, et éclairez avec votre smartp
 - Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
 - N'oubliez pas de sauvegarder votre programme à chaque étape.
 
-## Interprêtation et analyse des données @fullscreen
+## Interprêtation et analyse des données @showdialog
 
 💡
 Utilisez une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
@@ -79,7 +81,7 @@ Utilisez une application de traitement de données tel que Excel, Numbers ou Goo
 Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
 => Cela évite de perdre du temps lorsqu'on va analyser les données par la suite.
 
-## Situation 1 @fullscreen
+## Situation 1 @showdialog
 
 Dans l'exemple suivant nous allons utliser un capteur pour mesurer l'humidité du sol,
 et envoyer la valeur mesurée sur le PC via le port série **USB**.
