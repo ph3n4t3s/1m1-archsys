@@ -61,13 +61,15 @@ v
 
 ## Téléchargement du programme et visualisation des données
 
-⚠️
+ℹ️**nformations**
+- Lors du premier téléchargement, "Makecode" demande un appairage entre le Micro:Bit et l'ordinateur. 
 
-- Il est important de télécharger le programme sur le MicroBit à chaque **modification**.
 
-ℹ️
+Remarque : Cette opération s'effectue uniquement si cela n'a jamais été fait auparavant.
 
-- Lors du premier téléchargement, "Makecode" demande de d'apairer le Micro:Bit si cela n'a jamais été fait auparavant.
+
+
+
 - Lorsque le téléchargement est terminé, un nouveau bouton "**Afficher données Appareil**" doit apparaître sur la partie gauche de l'écran.
 
 ![Téléchargement-visualisation-sauvegarde](https://github.com/ph3n4t3s/1m1-archsys/blob/master/img/1-Transfert-Visualisation-Sauvegarde.gif?raw=true)
@@ -75,19 +77,22 @@ v
 💡
 Touchez le CPU pour faire varier la température, et éclairez avec votre smartphone la matrice de led du Micro:Bit.
 
-⚠️
-
+> ⚠️
 - Sauvegardez **toutes vos** données récoltées à chaque fois que vous faites des essais, ceci vous aidera à mieux comprendre ce qui se passe et apporter des corrections si besoin.
-- N'oubliez pas de sauvegarder votre programme à chaque étape.
+- N'oubliez pas de sauvegarder votre programme à chaque étape. (plusieurs versions)
+- N'oubliez pas de télécharger le programme sur le MicroBit à chaque **modification**.
 
 ## Interprêtation et analyse des données @showdialog
 
-💡
-Utilisez une application de traitement de données tel que Excel, Numbers ou Google Sheet pour visualiser et/ou traiter vos données de manière plus appronfondies.
+💡 Utilisez une application de traitement de données tel que Excel, Numbers ou Google Sheet pour :
+1. Visualiser
+2. Traiter/corriger
+3. Représenter sous forme graphique 
 
-⚠️
-Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
-=> Cela évite de perdre du temps lorsqu'on va analyser les données par la suite.
+vos données de manière plus appronfondies.
+
+> ⚠️ Il est **nécessaire** de valider les données récoltées, et supprimer celles qui sont inutiles ou incorrectes.
+> => Cela évite de perdre du temps lorsqu'on va analyser les données par la suite.
 
 ## Situation 1 @showdialog
 
